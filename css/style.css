@@ -1,0 +1,960 @@
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  text-rendering: optimizeSpeed;
+  -webkit-text-rendereing: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  line-height: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5vw;
+  font-weight: 900;
+  text-transform: lowercase;
+}
+
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background-color: #232323;
+  color: white;
+}
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-image: -o-radial-gradient(at 50% 0%, #3b3b3b 0px, #373737 20%, #232323 70%);
+  background-image: radial-gradient(at 50% 0%, #3b3b3b 0px, #373737 20%, #232323 70%);
+  background-size: 70vh 35vh;
+  background-repeat: no-repeat;
+  background-position: center top;
+  transition: opacity 5000ms ease-out 1000ms;
+  -webkit-animation: backgroundSize 30000ms infinite;
+  animation: backgroundSize 30000ms infinite;
+}
+@-webkit-keyframes backgroundSize {
+  50% {
+    background-size: 200vh 100vh;
+    background-position: center top;
+  }
+}
+@keyframes backgroundSize {
+  50% {
+    background-size: 200vh 100vh;
+    background-position: center top;
+  }
+}
+body.animate:before {
+  opacity: 1;
+}
+body .navbar {
+  position: fixed;
+  padding: 2.5vw;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  overflow-y: scroll;
+}
+body .navbar .navbar-brand {
+  position: relative;
+  display: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  line-height: 1;
+  font-size: inherit;
+  margin-bottom: 0;
+  opacity: 0.3;
+  -webkit-transition: opacity 350ms ease-out, top 1s ease-out, -webkit-transform 1s ease-out;
+  transition: opacity 350ms ease-out, top 1s ease-out, -webkit-transform 1s ease-out;
+  -o-transition: opacity 350ms ease-out, top 1s ease-out, transform 1s ease-out;
+  transition: opacity 350ms ease-out, top 1s ease-out, transform 1s ease-out;
+  transition: opacity 350ms ease-out, top 1s ease-out, transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+body .navbar .navbar-brand .logo,
+body .navbar .navbar-brand .left-square,
+body .navbar .navbar-brand .right-square {
+  width: 5vw;
+}
+body .navbar .navbar-brand .left-square,
+body .navbar .navbar-brand .right-square {
+  position: absolute;
+  left: 0;
+}
+@-webkit-keyframes left-square {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes left-square {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+body .navbar .navbar-brand .left-square {
+  -webkit-animation: left-square 30s linear infinite;
+  animation: left-square 30s linear infinite;
+}
+@-webkit-keyframes right-square {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes right-square {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+body .navbar .navbar-brand .right-square {
+  -webkit-animation: right-square 30s linear infinite;
+  animation: right-square 30s linear infinite;
+}
+body .navbar .navbar-brand:hover {
+  opacity: 1;
+  margin-left: 0;
+}
+body .navbar .navbar-brand.animate {
+  top: 0;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  margin-bottom: 2vw;
+}
+body .navbar .navbar-brand a {
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+body .navbar .navbar-brand a.no-events {
+  pointer-events: none;
+}
+body .navbar .navbar-brand a.no-events.hide {
+  opacity: 0;
+  /* width: 0; */
+}
+body .navbar [class*=line] {
+  display: none;
+  position: absolute;
+  width: 0.25vw;
+  background-color: transparent;
+}
+body .navbar [class*=line]:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: changeHeight 5000ms infinite;
+  opacity: 0.3;
+  transition: opacity 350ms ease-out;
+}
+body .navbar [class*=line].remove-opacity:after {
+  opacity: 1;
+}
+body .navbar [class*=line].hide:after {
+  opacity: 0;
+}
+@keyframes changeHeight {
+  0% {
+    height: 100%;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+body .navbar .line-1 {
+  left: 40vw;
+  top: 8vw;
+  height: 12vw;
+  transform: rotate(45deg);
+}
+body .navbar .line-2 {
+  right: 39vw;
+  top: 8vw;
+  height: 12vw;
+  transform: rotate(-45deg);
+}
+body .navbar .line-3 {
+  left: 44vw;
+  top: 11vw;
+  height: 12vw;
+  transform: rotate(25deg);
+}
+body .navbar .line-4 {
+  right: 33vw;
+  top: 3.5vw;
+  height: 15vw;
+  transform: rotate(-63deg);
+}
+body .navbar .line-5 {
+  left: 35vw;
+  top: 4vw;
+  height: 13vw;
+  transform: rotate(65deg);
+}
+body .navbar .line-6 {
+  right: 45vw;
+  top: 11vw;
+  height: 8vw;
+  transform: rotate(-30deg);
+}
+body .navbar .line-7 {
+  left: 37vw;
+  top: 1vw;
+  height: 6vw;
+  transform: rotate(90deg);
+}
+body .navbar .line-8 {
+  right: 35vw;
+  top: -0.5vw;
+  height: 9vw;
+  transform: rotate(-90deg);
+}
+body .navbar .line-9 {
+  left: 50vw;
+  top: 13vw;
+  height: 15vw;
+  transform: rotate(0deg);
+}
+body .navbar .navbar-nav {
+  display: none;
+  width: 100%;
+}
+body .navbar .navbar-nav .nav-item {
+  position: relative;
+}
+body .navbar .navbar-nav .nav-item a {
+  position: relative;
+  display: block;
+  width: auto;
+  /* overflow: hidden; - COMMENTED FOR A TEST THE last job element */
+  font-size: 5vw;
+  line-height: 1.2;
+  letter-spacing: 0.5vw;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+  padding-left: 0;
+  -webkit-transition: all 350ms ease-out;
+  -o-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+body .navbar .navbar-nav .nav-item a:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  color: white;
+  -webkit-transition: width 350ms ease-out, left 350ms ease-out;
+  -o-transition: width 350ms ease-out, left 350ms ease-out;
+  transition: width 350ms ease-out, left 350ms ease-out;
+  overflow: hidden;
+  white-space: nowrap;
+}
+body .navbar .navbar-nav .nav-item a small {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  font-size: 20%;
+  font-weight: 900;
+  letter-spacing: 0.2vw;
+  opacity: 0.3;
+  -webkit-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  -webkit-transition: opacity 350ms ease-out;
+  -o-transition: opacity 350ms ease-out;
+  transition: opacity 350ms ease-out;
+}
+body .navbar .navbar-nav .nav-item a small span {
+  position: relative;
+  padding: 0 0.15vw 0 0.3vw;
+  background: white;
+  color: #232323;
+}
+body .navbar .navbar-nav .nav-item a small span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: blueviolet;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: width 350ms ease-out;
+  -o-transition: width 350ms ease-out;
+  transition: width 350ms ease-out;
+}
+body .navbar .navbar-nav .nav-item a small span:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0.3vw;
+  top: 0;
+  width: 0;
+  padding-left: 0;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: width 250ms ease-out;
+  -o-transition: width 250ms ease-out;
+  transition: width 250ms ease-out;
+}
+body .navbar .navbar-nav .nav-item a:hover, body .navbar .navbar-nav .nav-item a.no-events {
+  padding-left: 2vw;
+}
+body .navbar .navbar-nav .nav-item a:hover:before, body .navbar .navbar-nav .nav-item a.no-events:before {
+  left: 2vw;
+  width: 100%;
+}
+body .navbar .navbar-nav .nav-item a:hover small, body .navbar .navbar-nav .nav-item a.no-events small {
+  opacity: 1;
+  -webkit-transition: opacity 350ms ease-out 350ms;
+  -o-transition: opacity 350ms ease-out 350ms;
+  transition: opacity ease-out 350ms;
+}
+body .navbar .navbar-nav .nav-item a:hover small span:before, body .navbar .navbar-nav .nav-item a.no-events small span:before {
+  width: 100%;
+  -webkit-transition: width 350ms ease-out 350ms;
+  -o-transition: width 350ms ease-out 350ms;
+  transition: width 350ms ease-out 350ms;
+}
+body .navbar .navbar-nav .nav-item a:hover small span:after, body .navbar .navbar-nav .nav-item a.no-events small span:after {
+  width: 100%;
+  -webkit-transition: width 350ms ease-out 350ms;
+  -o-transition: width 350ms ease-out 350ms;
+  transition: width 350ms ease-out 350ms;
+}
+body .navbar .navbar-nav .nav-item a.no-events {
+  pointer-events: none;
+}
+body .navbar .navbar-nav .nav-item a.no-events.hide {
+  opacity: 0;
+}
+body .projects .container {
+  max-width: 90vw;
+}
+body .projects .back {
+  position: fixed;
+  top: 5vw;
+  text-align: left;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+body .projects .back a {
+  display: inline-block;
+  margin-left: -15px;
+  -webkit-transform: rotate(-5deg) translateX(0);
+  -ms-transform: rotate(-5deg) translateX(0);
+  transform: rotate(-5deg) translateX(0);
+  -webkit-transition: all 350ms ease-out;
+  -o-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+body .projects .back a span {
+  position: relative;
+  display: inline-block;
+  margin-top: -1px;
+  padding: 0 1vw;
+  font-size: 2vw;
+  font-weight: 900;
+  line-height: 1.4;
+  color: #232323;
+  background-color: white;
+}
+body .projects .back a span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: blueviolet;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: width 350ms ease-out;
+  -o-transition: width 350ms ease-out;
+  transition: width 350ms ease-out;
+}
+body .projects .back a span:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 1vw;
+  top: 0;
+  width: 0;
+  padding: 0;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: width 250ms ease-out;
+  -o-transition: width 250ms ease-out;
+  transition: width 250ms ease-out;
+}
+body .projects .back a:hover {
+  -webkit-transform: rotate(-5deg) translateX(25%);
+  -ms-transform: rotate(-5deg) translateX(25%);
+  transform: rotate(-5deg) translateX(25%);
+}
+body .projects .back a:hover span:before {
+  width: 100%;
+  -webkit-transition: width 350ms ease-out 350ms;
+  -o-transition: width 350ms ease-out 350ms;
+  transition: width 350ms ease-out 350ms;
+}
+body .projects .back a:hover span:after {
+  width: 100%;
+  -webkit-transition: width 350ms ease-out 350ms;
+  -o-transition: width 350ms ease-out 350ms;
+  transition: width 350ms ease-out 350ms;
+}
+body .project {
+  display: none;
+  position: relative;
+  padding: 3vw 0 3vw;
+  letter-spacing: 0.2vw;
+  z-index: 35;
+}
+body .project .title {
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+body .project .title > * {
+  margin-right: auto;
+}
+body .project .title h2 {
+  /* font-size: 15.5vw; OLD FONT-SIZE */
+  font-size: 12.4vw;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: lowercase;
+  text-indent: -0.7vw;
+  margin-bottom: 0;
+  padding: 3vw 0 5vw;
+  /* word-break: break-all; OLD BREAK */
+  word-break: break-word;
+  /* BACKGROUND-IMAGE */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transition: color 1s ease-in-out;
+  -o-transition: color 1s ease-in-out;
+  transition: color 1s ease-in-out;
+}
+body .project .title h2:hover {
+  color: transparent;
+}
+body .project .title h3 {
+  max-width: calc(100% - 150px);
+  font-size: 2.5vw;
+  font-weight: 300;
+  text-transform: lowercase;
+  margin-bottom: 0;
+  opacity: 0.3;
+}
+body .project .title h4 {
+  max-width: calc(100% - 150px);
+  margin-bottom: 0;
+  font-size: 2vw;
+  font-weight: 200;
+  text-transform: lowercase;
+}
+body .project .tags:not(:last-child),
+body .project .timeline:not(:last-child),
+body .project .description:not(:last-child),
+body .project .links:not(:last-child) {
+  padding-bottom: 2vw;
+}
+body .project .tags h2,
+body .project .timeline h2,
+body .project .description h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5vw;
+  font-weight: 800;
+  color: blueviolet;
+}
+body .project .tags h2 + p.company,
+body .project .timeline h2 + p.company,
+body .project .description h2 + p.company {
+  margin-top: 0.5vw;
+}
+body .project .tags p,
+body .project .tags ul,
+body .project .timeline p,
+body .project .timeline ul,
+body .project .description p,
+body .project .description ul {
+  font-size: 1.5vw;
+  font-weight: 500;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 0;
+}
+body .project .tags p.indent,
+body .project .tags ul.indent,
+body .project .timeline p.indent,
+body .project .timeline ul.indent,
+body .project .description p.indent,
+body .project .description ul.indent {
+  border-left: 0.3vw solid;
+}
+body .project .tags p.company,
+body .project .tags ul.company,
+body .project .timeline p.company,
+body .project .timeline ul.company,
+body .project .description p.company,
+body .project .description ul.company {
+  margin-top: 1.5vw;
+  color: rgba(255, 255, 255, 0.6);
+}
+body .project .tags p.role,
+body .project .tags ul.role,
+body .project .timeline p.role,
+body .project .timeline ul.role,
+body .project .description p.role,
+body .project .description ul.role {
+  color: rgba(255, 255, 255, 0.5);
+}
+body .project .tags p.dates small,
+body .project .tags ul.dates small,
+body .project .timeline p.dates small,
+body .project .timeline ul.dates small,
+body .project .description p.dates small,
+body .project .description ul.dates small {
+  font-weight: 200;
+}
+body .project .tags p.subcompany,
+body .project .tags ul.subcompany,
+body .project .timeline p.subcompany,
+body .project .timeline ul.subcompany,
+body .project .description p.subcompany,
+body .project .description ul.subcompany {
+  margin-top: 0.5vw;
+}
+body .project .tags p.paragraph,
+body .project .tags ul.paragraph,
+body .project .timeline p.paragraph,
+body .project .timeline ul.paragraph,
+body .project .description p.paragraph,
+body .project .description ul.paragraph {
+  line-height: 1.2;
+  text-transform: none;
+}
+body .project .tags p:is(p).indent,
+body .project .tags ul:is(p).indent,
+body .project .timeline p:is(p).indent,
+body .project .timeline ul:is(p).indent,
+body .project .description p:is(p).indent,
+body .project .description ul:is(p).indent {
+  padding-left: 1vw;
+}
+body .project .tags p:is(ul).indent,
+body .project .tags ul:is(ul).indent,
+body .project .timeline p:is(ul).indent,
+body .project .timeline ul:is(ul).indent,
+body .project .description p:is(ul).indent,
+body .project .description ul:is(ul).indent {
+  padding-left: 2.5vw;
+}
+body .project .tags p strong,
+body .project .tags ul strong,
+body .project .timeline p strong,
+body .project .timeline ul strong,
+body .project .description p strong,
+body .project .description ul strong {
+  color: rgba(255, 255, 255, 0.6);
+}
+body .project .tags h3 {
+  margin: 1vw 0 0;
+  font-size: 1.5vw;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+body .project .description p {
+  color: white;
+}
+body .project .links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body .project .links ul li a {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: white;
+  opacity: 0.3;
+  text-decoration: underline;
+}
+body .project.hm-project .title h2 {
+  background-image: url("../images/hm.gif");
+}
+body .project.prada-project .title h2 {
+  background-image: url("../images/prada.gif");
+}
+body .project.rayban-project .title h2 {
+  background-image: url("../images/rayban.gif");
+}
+body .project.generali-project .title h2 {
+  background-image: url("../images/generali.gif");
+}
+body .project.marchesi-project .title h2 {
+  background-image: url("../images/marchesi.gif");
+}
+body .project.freedompro-project .title h2 {
+  background-image: url("../images/freedompro.gif");
+}
+body .project.about-project .title h2 {
+  background-image: url("../images/about.gif");
+}
+body .project.about-project .tags p {
+  column-count: 3;
+}
+body .dark,
+body .light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  z-index: 30;
+}
+body .dark.move-width,
+body .light.move-width {
+  width: 100vw;
+}
+body .light {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: width 350ms ease-out 350ms;
+  -o-transition: width 350ms ease-out 350ms;
+  transition: width 350ms ease-out 350ms;
+}
+body .light.move-width {
+  -webkit-transition: width 350ms ease-in;
+  -o-transition: width 350ms ease-in;
+  transition: width 350ms ease-in;
+}
+body .dark {
+  background-color: #232323;
+  -webkit-transition: width 350ms ease-in;
+  -o-transition: width 350ms ease-in;
+  transition: width 350ms ease-in;
+}
+body .dark.move-width {
+  -webkit-transition: width 350ms ease-out 350ms;
+  -o-transition: width 350ms ease-out 350ms;
+  transition: width 350ms ease-out 350ms;
+}
+@media (pointer: coarse) {
+  body .light.move-width {
+    -webkit-transition: width 350ms ease-in 2000ms;
+    -o-transition: width 350ms ease-in 2000ms;
+    transition: width 350ms ease-in 2000ms;
+  }
+  body .dark.move-width {
+    -webkit-transition: width 350ms ease-out 2350ms;
+    -o-transition: width 350ms ease-out 2350ms;
+    transition: width 350ms ease-out 2350ms;
+  }
+}
+body .bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-perspective: 100vw;
+  perspective: 100vw;
+}
+body .bg-image > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transform: scale(1) rotateY(0deg) rotate(0deg);
+  transform: scale(1) rotateY(0deg) rotate(0deg);
+  -webkit-transition: -webkit-transform 30s ease-out;
+  transition: -webkit-transform 30s ease-out;
+  -o-transition: transform 30s ease-out;
+  transition: transform 30s ease-out;
+  transition: transform 30s ease-out, -webkit-transform 30s ease-out;
+}
+body .bg-image:nth-child(odd).animate > img {
+  -webkit-transform: scale(1.3) rotateY(12deg) rotate(-6deg);
+  transform: scale(1.3) rotateY(12deg) rotate(-6deg);
+}
+body .bg-image:nth-child(even).animate > img {
+  -webkit-transform: scale(1.3) rotateY(-12deg) rotate(6deg);
+  transform: scale(1.3) rotateY(-12deg) rotate(6deg);
+}
+body .bg-image.hm {
+  z-index: 2;
+}
+body .bg-image.prada {
+  z-index: 3;
+}
+body .bg-image.rayban {
+  z-index: 4;
+}
+body .bg-image.generali {
+  z-index: 5;
+}
+body .bg-image.marchesi {
+  z-index: 7;
+}
+body .bg-image.freedompro {
+  z-index: 6;
+}
+
+@media screen and (max-width: 767px) {
+  body .navbar {
+    padding: 5vw;
+    overflow-x: hidden;
+  }
+  body .navbar .navbar-brand .logo,
+  body .navbar .navbar-brand .left-square,
+  body .navbar .navbar-brand .right-square {
+    width: 15vw;
+  }
+  body .navbar [class*=line] {
+    width: 0.3vw;
+  }
+  body .navbar .line-1 {
+    left: 24vw;
+    top: 31vw;
+    transform: rotate(45deg) scale(2.5);
+  }
+  body .navbar .line-2 {
+    right: 25vw;
+    top: 29vw;
+    height: 12vw;
+    transform: rotate(-45deg) scale(2.5);
+  }
+  body .navbar .line-3 {
+    left: 35vw;
+    top: 36vw;
+    transform: rotate(25deg) scale(2.5);
+  }
+  body .navbar .line-4 {
+    right: 14vw;
+    top: 21.5vw;
+    transform: rotate(-63deg) scale(2.5);
+  }
+  body .navbar .line-5 {
+    left: 15vw;
+    top: 21vw;
+    transform: rotate(65deg) scale(2.5);
+  }
+  body .navbar .line-6 {
+    right: 37vw;
+    top: 34vw;
+    transform: rotate(-30deg) scale(2.5);
+  }
+  body .navbar .line-7 {
+    left: 21vw;
+    top: 10vw;
+    transform: rotate(90deg) scale(2.5);
+  }
+  body .navbar .line-8 {
+    right: 19vw;
+    top: 8.5vw;
+    transform: rotate(-90deg) scale(2.5);
+  }
+  body .navbar .line-9 {
+    left: 50vw;
+    top: 42vw;
+    transform: rotate(0deg) scale(2.5);
+  }
+  body .navbar .navbar-nav .nav-item a:not(.go) {
+    font-size: 9vw;
+  }
+  body .navbar .navbar-nav .nav-item a:not(.go):after {
+    height: 1vw;
+  }
+  body .navbar .navbar-nav .nav-item a.go {
+    padding: 0 0 0 1vw;
+    top: 0;
+    font-size: 4vw;
+  }
+  body .projects .container {
+    max-width: 85vw;
+  }
+  body .projects .back {
+    margin-top: 1vw;
+  }
+  body .projects .back a span {
+    font-size: 5vw;
+  }
+  body .project {
+    padding: 5vw 0 5vw;
+    letter-spacing: 0.5vw;
+  }
+  body .project .title h2 {
+    font-size: 11.2vw;
+    padding: 5vw 0 7vw;
+  }
+  body .project .title h3 {
+    font-size: 5vw;
+    line-height: 1.2;
+    max-width: calc(100% - 115px);
+  }
+  body .project .title h4 {
+    font-size: 4vw;
+    max-width: calc(100% - 115px);
+  }
+  body .project .tags:not(:last-child),
+  body .project .timeline:not(:last-child),
+  body .project .description:not(:last-child),
+  body .project .links:not(:last-child) {
+    padding-bottom: 7vw;
+  }
+  body .project .tags h2,
+  body .project .timeline h2,
+  body .project .description h2 {
+    font-size: 7vw;
+  }
+  body .project .tags h2 + p.company,
+  body .project .timeline h2 + p.company,
+  body .project .description h2 + p.company {
+    margin-top: 2.5vw;
+  }
+  body .project .tags p,
+  body .project .tags ul,
+  body .project .timeline p,
+  body .project .timeline ul,
+  body .project .description p,
+  body .project .description ul {
+    font-size: 4vw;
+    line-height: 1.6;
+    text-align: left;
+  }
+  body .project .tags p.company,
+  body .project .tags ul.company,
+  body .project .timeline p.company,
+  body .project .timeline ul.company,
+  body .project .description p.company,
+  body .project .description ul.company {
+    margin-top: 4vw;
+  }
+  body .project .tags p.subcompany,
+  body .project .tags ul.subcompany,
+  body .project .timeline p.subcompany,
+  body .project .timeline ul.subcompany,
+  body .project .description p.subcompany,
+  body .project .description ul.subcompany {
+    margin-top: 2vw;
+  }
+  body .project .tags p:is(p).indent,
+  body .project .tags ul:is(p).indent,
+  body .project .timeline p:is(p).indent,
+  body .project .timeline ul:is(p).indent,
+  body .project .description p:is(p).indent,
+  body .project .description ul:is(p).indent {
+    padding-left: 2vw;
+  }
+  body .project .tags p:is(ul).indent,
+  body .project .tags ul:is(ul).indent,
+  body .project .timeline p:is(ul).indent,
+  body .project .timeline ul:is(ul).indent,
+  body .project .description p:is(ul).indent,
+  body .project .description ul:is(ul).indent {
+    padding-left: 5.5vw;
+  }
+  body .project .tags h2 + h3 {
+    margin-top: 2.5vw;
+  }
+  body .project .tags h3 {
+    font-size: 4vw;
+    margin-top: 4vw;
+  }
+  body .project .tags p {
+    text-align: left;
+  }
+  body .project .links ul li a {
+    font-size: 4vw;
+  }
+  body .project.about-project .tags p {
+    column-count: 2;
+  }
+}
+@media screen and (max-width: 379px) {
+  body .project.about-project .tags p {
+    column-count: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
