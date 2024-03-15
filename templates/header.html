@@ -1,0 +1,36 @@
+<header ng-controller="WowCtrl">
+    <nav role="navigation" class="navbar" ng-controller="NavBarCtrl">
+        <button type="button" class="btn btn-navbar wow fadeIn" data-wow-offset="1" ng-click="isCollapsed = !isCollapsed; isCloseMenu = !isCloseMenu">
+            <span class="bars" ng-class="isCloseMenu ? 'closeMenu' : 'closeMenu-disabled'"></span>
+            <span class="bars" ng-class="isCloseMenu ? 'closeMenu' : 'closeMenu-disabled'"></span>
+            <span class="bars" ng-class="isCloseMenu ? 'closeMenu' : 'closeMenu-disabled'"></span>          
+        </button>
+        <div class="menu" uib-collapse="isCollapsed">
+            <ul class="list-inline">
+                <li><a href="home" ng-class="{ active: isActive('/home')}"><span>.</span>home</a></li>
+                <li><a href="about" ng-class="{ active: isActive('/about')}"><span>.</span>about</a></li>
+                <li><a href="work" ng-class="{ active: isActive('/work')}"><span>.</span>works</a></li>
+                <li><a href="contact" ng-class="{ active: isActive('/contact')}"><span>.</span>contact</a></li>
+            </ul>   
+        </div>
+    </nav>
+	<div class="container">
+    	<div class="row">
+        	<div class="col-sm-12">
+                <div class="brand wow fadeIn" data-wow-offset="2" data-wow-delay="1s">
+                    <a href="home" class="brand-link">
+                        <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -4 200 204" enable-background="new 0 -4 200 204" xml:space="preserve">
+                            <g>
+                                <path fill="#D32F2F" d="M185.186,14.815v170.371H14.815V14.815H185.186 M200,0H0v200h200V0L200,0z"/>
+                            </g>
+                            <g>
+                                <path fill="#D32F2F" d="M129.629,97.037L100,139.26L70.371,97.037v48.889H55.556V54.074C55.957,54.638,100,115.602,100,115.602
+                                    l44.446-61.527l-0.002,91.852h-14.815V97.037z"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
