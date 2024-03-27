@@ -23,7 +23,7 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider, cfpLo
 		})
 		.state('work', {
 			url: "/work",
-			templateUrl: "partials/work.html",
+			templateUrl: "partials/portfolio.html",
 			//controller: "faqController",
 			containerClass: "yellow"
 		})

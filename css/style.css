@@ -206,6 +206,42 @@ form {
 
 
 
+/* LOADER */
+/* -------------- */
+body > *:not(#loader) {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.35s ease-in-out;
+}
+body.show > *:not(#loader) {
+	display: block;
+	opacity: 1;
+}
+#loader {
+	background-color: violet;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% -50%);
+	z-index: 999999;
+	width: 20vw;
+	height: 20vw;
+	max-width: 200px;
+	max-height: 200px;
+}
+/* -------------- */
+
+/* ACCORDION */
+/* -------------- */
+.btn-navbar + *,
+.panel-heading + * {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.35s ease-out;
+}
+/* -------------- */
+
+
 /* HEADER */
 /* -------------- */
 .header:before {
@@ -716,14 +752,20 @@ h2.page-title:after{
 	background: #8bc34a;
 	color: #fff;
 }
-.green .progress {
-    height: 3em;
-    border-radius: 0;
-	/* not CurretColor for old Safari 6/7 mobile iphone4 */
-    border: 1px solid #8bc34a;
+.green .progressbar {
+	position: relative;
+  height: 3em;
+	margin-bottom: 20px;
+  border: 1px solid #8bc34a;
 	background-color: transparent;
 }
-.green .progress-bar{
+.green .progressbar:after {
+	content: "";
+	position: absolute;
+	width: calc(var(--prog) * 1%);
+	height: 100%;
+	left: 0;
+	top: 0;
 	background-color: rgba(139,195,74,0.3);
 }
 /* -------------- */

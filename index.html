@@ -49,13 +49,10 @@
     <link rel="stylesheet" href="css/bootstrap-3-3-6.min.css">
 
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <!-- CSS Animate -->
     <link rel="stylesheet" href="css/animate.min.css">
-    
-    <!-- CSS Loading Bar -->
-    <link rel="stylesheet" href="css/loading-bar.min.css" media="all">
     
     <!-- CSS FontAwesome -->
     <link rel="stylesheet" href="fonts/FontAwesome/css/font-awesome.min.css">
@@ -74,38 +71,133 @@
     </script>
 
 </head>
-<body ng-app="WebApp" class="{{containerClass}}">
+<body class="red">
     <!--[if lt IE 9]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
         your browser</a> to improve your experience.</p>
     <![endif]-->
+
+    <div id="loader"></div>
     
     <!-- Website Content -->
-    <div ng-include='"templates/header.html"' class="header"></div>
-    <div class="page {{ pageClass }}" ui-view></div>
-    <!--<div ng-include='"templates/footer.html"'></div>-->
+    <div class="header">
+        <header>
+            <nav role="navigation" class="navbar">
+                <button type="button" class="btn btn-navbar wow fadeIn" data-wow-offset="1" >
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>          
+                </button>
+                <div class="menu">
+                    <ul class="list-inline">
+                        <li><a href="/" class="active"><span>.</span>home</a></li>
+                        <li><a href="/pages/about.html"><span>.</span>about</a></li>
+                        <li><a href="/pages/portfolio.html"><span>.</span>portfolio</a></li>
+                        <li><a href="/pages/contact.html"><span>.</span>contact</a></li>
+                    </ul>   
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="brand wow fadeIn" data-wow-offset="2" data-wow-delay="1s">
+                            <a href="/" class="brand-link">
+                                <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -4 200 204" enable-background="new 0 -4 200 204" xml:space="preserve">
+                                    <g>
+                                        <path fill="#D32F2F" d="M185.186,14.815v170.371H14.815V14.815H185.186 M200,0H0v200h200V0L200,0z"/>
+                                    </g>
+                                    <g>
+                                        <path fill="#D32F2F" d="M129.629,97.037L100,139.26L70.371,97.037v48.889H55.556V54.074C55.957,54.638,100,115.602,100,115.602
+                                            l44.446-61.527l-0.002,91.852h-14.815V97.037z"/>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="page">
+        <div class="section">
+
+            <div class="container">
+        
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="title wow zoomIn" data-wow-delay="2s" data-wow-duration="3s" data-wow-offset="3">
+                            <h1><span>Graphic,</span> <span>Web Designer &amp; </span><br/><span>FRONT END DEVELOPER</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+        
+            </div>
+            <!-- /.container -->
+        
+        </div>
+        <!-- /.section -->
+        
+        <div class="section">
+        
+            <div class="container">
+        
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="img-profile wow zoomInUp" data-wow-delay="1s" data-wow-duration="3s" data-wow-offset="4">
+                            <div class="figure">
+                                <img class="img-responsive profile" src="images/profile.jpg" alt="Web Designer Como">
+                                <p class="wow fadeInUp" data-wow-delay="2s" data-wow-duration="3s" data-wow-offset="5"><span>M</span>assimiliano<br />Ronchetti</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 wow fadeInUp" data-wow-offset="6">
+                        <h2 class="page-title">. Pre</h2>
+                        <p>Dopo aver frequentato scuola di <strong>Grafica Pubblicitaria</strong> a Como e un corso di <strong>Web Design</strong> a Milano, mi sono avvicinato al mondo del <strong>Web</strong> nel 2008.</p>
+                      <p>Lavorando in diverse <strong>Web Agency</strong> di Como, Milano e Svizzera ho appreso competenze sia <strong>Grafiche</strong> che da <strong>Front End Developer</strong>, andando a completare la figura di <strong>Web Designer</strong>.</p>
+                      <p>Le ultime esperienze svolte per aziende come: <strong>Prada</strong>, <strong>Rayban</strong>, <strong>H&amp;M</strong> e <strong>Generali</strong> mi hanno avvicinato molto alla figura <strong>Front End</strong> ma con occhio di riguardo sul corretto sviluppo dei layout ideati dai Designer UX/UI per raggiungere i migliori risultati.</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+        
+            </div>
+            <!-- /.container -->
+        
+        </div>
+        <!-- /.section -->
+        
+        <div class="section">
+        
+            <div class="container">
+        
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="next">
+                            <p class="read-next">read next</p>
+                            <p class="next-page">. About</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <a class="btn btn-lg btn-primary pull-right next-arrow" href="/pages/about.html">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.row -->
+        
+            </div>
+            <!-- /.container -->
+        
+        </div>
+        <!-- /.section -->
+    </div>
     
     <!-- Vendor: Javascripts -->
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" defer></script>-->
-	<script src="js/jquery-1.11.0.min.js" defer></script>
-    <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
-    
-    <!-- Vendor: Angular -->
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js" defer></script>-->
-	<script src="js/angularjs-1.5.3.min.js" defer></script>
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js" defer></script>-->
-	<script src="js/angularjs-animate-1.5.3.min.js" defer></script>
-    <script src="js/ui-bootstrap-tpls-1.3.2.min.js" defer></script>
-    <script src="js/angular-ui-router.min.js" defer></script>
-    
-    <!-- App Javascripts -->
-    <script src="js/app.js" defer></script>
     
     <!-- Plugin Javascripts -->
     <script src="js/wow.min.js" defer></script>
-    <script src="js/loading-bar.min.js" defer></script>
-	<script src="js/angularjs-placeholder.js" defer></script>
-    <script src="js/prefixfree.min.js" defer></script>
 
+    <!-- App Javascripts -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>
