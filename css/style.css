@@ -118,7 +118,7 @@ body {
 *:not(.menu):not(.brand):not(.page-title):not(.panel-collapse):not(.panel-heading):not(.form-control):not(.fa){
 	user-select: none;
 	
-	transition: all .3s ease;
+	/*transition: all .3s ease;*/
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -648,7 +648,7 @@ h2.page-title:after{
     content: "\f1da";
 }
 .red p{
-	font-size: 4em;
+	font-size: 2.8em;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -941,23 +941,92 @@ h2.page-title:after{
 	font-style: italic;
 	margin-bottom: 0.5em;
 }
-.yellow .panel-body img{
-	border: 1em solid #fff;
-	padding: 0.5em;
-	margin-bottom: 20px;
-	opacity: 0.3;
-	
-	transition: opacity .3s ease;
+.yellow .panel-body .border {
+	border: 1em solid rgba(255,255,255,0.3);
+	padding: 1em;
+	margin-bottom: 3rem;
 }
-.yellow .panel-body img:hover,.yellow .panel-body img:focus{
-	opacity: 1;
+.yellow .panel-body .border:hover,
+.yellow .panel-body .border:focus {
+	border-color:rgba(255,255,255,1);
+	transition: border-color .3s ease;
 }
+.yellow .panel-body .images {
+	position: relative;
+	overflow: hidden;
+}
+.yellow .panel-body .img-project {
+	position: absolute;
+	top: 25.5%;
+	left: 48.7%;
+	transform: translateX(-50%);
+	width: 34%;
+	height: 28.5%;
+	margin: 0;
+	overflow: hidden;
+}
+.yellow .panel-body .img-project .project {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+/* 1s = 50% */
+/* freedompro */
+.yellow .panel-body .img-project .project.freedompro {
+	transition: top 1s ease-in-out;
+}
+.yellow .panel-body .images:hover .img-project .project.freedompro {
+	transition: top 6.8s ease-in-out;
+	top: -339%;
+}
+/* generali */
+.yellow .panel-body .img-project .project.generali {
+	transition: top 1s ease-in-out;
+}
+.yellow .panel-body .images:hover .img-project .project.generali {
+	transition: top 24.7s ease-in-out;
+	top: -1237.5%;
+}
+/* ray-ban */
+.yellow .panel-body .img-project .project.rayban {
+	transition: top 1s ease-in-out;
+}
+.yellow .panel-body .images:hover .img-project .project.rayban {
+	transition: top 18s ease-in-out;
+	top: -900.8%;
+}
+/* h&m */
+.yellow .panel-body .img-project .project.hm {
+	transition: top 1s ease-in-out;
+}
+.yellow .panel-body .images:hover .img-project .project.hm {
+	transition: top 7s ease-in-out;
+	top: -350%;
+}
+/* prada */
+.yellow .panel-body .img-project .project.prada {
+	transition: top 1s ease-in-out;
+}
+.yellow .panel-body .images:hover .img-project .project.prada {
+	transition: top 9.9s ease-in-out;
+	top: -496.5%;
+}
+
+.yellow .panel-body .images .zoom {
+	transform: scale(1.01);
+	transition: transform 30s ease-out;
+}
+.yellow .panel-body .images:hover .zoom {
+	transform: scale(1.4);
+}
+
 .yellow .panel-body p{
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3.8em;
+	font-size: 2.8em;
 	color:#fff;
-	margin: 0;
+	margin: 2rem 0 0;
 }
 .yellow .panel-body p.company{
 	font-weight: 300;
@@ -966,9 +1035,11 @@ h2.page-title:after{
 .yellow .panel-body ul{
 	padding: 0;
 	list-style: none;
+	column-count: 2;
+	column-gap: 2rem;
 }
 .yellow .panel-body ul li{
-	font-size: 3.6em;
+	font-size: 2.6em;
 	color: #787878;
 	
 	transition: color .3s ease;
@@ -978,6 +1049,7 @@ h2.page-title:after{
 }
 .yellow .panel-body hr{
 	color: #787878;
+	margin: 3rem 0;
 }
 .yellow .panel-body a.linkSite{
 	display: block;
@@ -1277,24 +1349,24 @@ footer {
 ==================================================*/
 
 
-    /*==========  Mobile First Method  ==========*/
+  /*==========  Mobile First Method  ==========*/
 
-    /* Custom, iPhone Retina */ 
-    @media only screen and (min-width : 320px) {
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
 		body{font-size:50%;}
 		
 		.red .title h1 span:last-child{letter-spacing:8px;}        
-    }
+  }
 
-    /* Extra Small Devices, Phones */ 
-    @media only screen and (min-width : 480px) {
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (min-width : 480px) {
 		body{font-size:60%;}
 
 		.red .title h1 span:last-child{letter-spacing:14px;} 
-    }
+  }
 
-    /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) {
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
 		body{font-size:70%;}
 		
 		.menu li a:before {
@@ -1336,42 +1408,44 @@ footer {
 		.red .title h1 span:last-child{letter-spacing:18px;} 
 		
 		.green a.resume {width:720px;}
-    }
 
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
+		.yellow .panel-body ul { column-count: 3;}
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
 		body{font-size:80%;}
 		
 		.red .title h1 span:last-child{letter-spacing:20px;}
 		
 		.green a.resume {width:940px;} 
-    }
+  }
 
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
 		body{font-size:100%;}
 		
 		.green a.resume {width:1140px;}
-    }
+  }
 
 
 
-    /*==========  Non-Mobile First Method  ==========*/
+  /*==========  Non-Mobile First Method  ==========*/
 
-    /* Large Devices, Wide Screens */
-    @media only screen and (max-width : 1200px) {
+  /* Large Devices, Wide Screens */
+  @media only screen and (max-width : 1200px) {
 		/*.red .img-profile p {letter-spacing:30px;font-size:7.2em;}*/
 		.red .img-profile p {letter-spacing:35px;font-size:8.2em;}
-    }
+  }
 
-    /* Medium Devices, Desktops */
-    @media only screen and (max-width : 992px) {
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
 		/*.red .img-profile p {letter-spacing:20px;font-size:7.2em;}*/
 		.red .img-profile p {letter-spacing:30px;font-size:8.2em;}
-    }
+  }
 
-    /* Small Devices, Tablets */
-    @media only screen and (max-width : 768px) {
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
 		.menu li{margin:0 25px;}
 		
 		.brand svg {width:150px;height:150px;}
@@ -1390,10 +1464,10 @@ footer {
 		
 		.green .section:nth-child(2) a.resume{margin:1em 15px 0;}
 		
-    }
+  }
 
-    /* Extra Small Devices, Phones */ 
-    @media only screen and (max-width : 480px) {
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (max-width : 480px) {
 		/*.btn-navbar{margin-bottom:10px;}*/
 		.menu li {margin:0 12px; display:block;}
 		.menu li a {font-size:6em;}
@@ -1411,11 +1485,11 @@ footer {
 		.light-blue .brand:after {width:22.5px;height:7.5px;}
 		
 		.red .img-profile p {letter-spacing:8px;font-size:6.2em;}	
-    }
+  }
 
-    /* Custom, iPhone Retina */ 
-    @media only screen and (max-width : 320px) {
+  /* Custom, iPhone Retina */ 
+  @media only screen and (max-width : 320px) {
 		.red .title h1 span:last-child {letter-spacing:normal;}
 		
 		.red .img-profile p {letter-spacing:5px;font-size:5.2em;}
-    }
+  }

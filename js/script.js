@@ -26,15 +26,16 @@ window.addEventListener('load', function () {
 		openPanel(this);
 	});
 
-	// ACCORDION
+	// PORTFOLIO ACCORDION
 	const acc = document.getElementsByClassName("panel-heading");
 	let i;
 	for (i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function() {
 			openPanel(this);
+			this.querySelector("i").classList.toggle("fa-angle-down");
+			this.querySelector("i").classList.toggle("fa-angle-up");
 		});
-	}
-
+	}         
 });
 
 //
@@ -59,7 +60,6 @@ function openPanel(el){
 	} else {
 		nextEl.style.maxHeight = nextEl.scrollHeight + "px";
 	}
-
 	if(parentEl){
 		parentEl.classList.toggle("panel-open");
 	}
