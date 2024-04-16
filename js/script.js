@@ -35,8 +35,20 @@ window.addEventListener('load', function () {
 			this.querySelector("i").classList.toggle("fa-angle-down");
 			this.querySelector("i").classList.toggle("fa-angle-up");
 		});
-	}         
+	}   
+	
+	window.addEventListener('resize', function() {
+		openPanel(navBtn);
+		for (let i = 0; i < acc.length; i++) {
+			if (acc[i].closest(".panel").classList.contains('open')) {
+				openPanel(acc[i]);
+			}
+		}
+	});
 });
+
+// ON RESIZE
+//window.onresize = openPanel(".btn-navbar");
 
 //
 // FUNCTIONS

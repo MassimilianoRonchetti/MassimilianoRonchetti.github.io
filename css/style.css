@@ -105,9 +105,15 @@ html, body {
 	text-rendering: optimizeLegibility;
 }
 body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
 	font-size: 100%;
-	
-	overflow-x:hidden;
+	overflow-x: hidden;
+}
+body.show {
+	display: flex !important;
 }
 
 /* 
@@ -474,35 +480,39 @@ h2.page-title:after{
 .section {
     padding: 5em 0;
 }
+.page {
+	flex: 1;
+}
 
 /* section first-child */
 .section:first-child{
 	padding: 5em 0 0;
 }
 
-/* section last-child */
-.section:last-child{
+/* footer */
+footer{
+	padding: 5em 0;
 	background:currentColor;
 	box-shadow: 0px -10px 40px rgba(0,0,0,0.2);
 	
 	position: relative;
 	z-index: 3;
 }
-.section:last-child .next{
+footer .next{
 	position: relative;
 }
-.section:last-child p{
+footer p{
 	color:#fff;
 	left:0;
 	
 	transition: left .5s linear;
 }
-.section:last-child:hover p{
+footer:hover p{
 	color:#fff;
 	left:10px;
 }
 /* read next */
-.section:last-child p.read-next{
+footer p.read-next{
 	position: absolute;
 	
     font-size: 3.6em;
@@ -510,44 +520,48 @@ h2.page-title:after{
     font-weight: 300;
 }
 /* next page name */
-.section:last-child p.next-page{
+footer p.next-page{
 	position: relative;
-	
+	margin: 0;
 	font-size: 7em;
-    font-weight: 700;
-    font-style: italic;
-    transform: translateY(20%);
+	font-weight: 700;
+	font-style: italic;
+	transform: translateY(20%);
 }
 /* link dx next [>] */
-.section:last-child a.next-arrow{
+footer a.next-arrow{
 	position: relative;
 	color: #fff;
 	
-    background: transparent;
-    border: 0.3em solid currentColor;
-    border-radius: 0;
-    margin-top: 0.1em;
+	background: transparent;
+	border: 0.3em solid currentColor;
+	border-radius: 0;
+	margin-top: 0.1em;
 	padding: 0.2em 0.44em;
 
 	font-size: 4em;
 	left:0;
 	transition: left .5s linear, transform .3s ease;
 }
-.section:last-child:hover a.next-arrow{
+footer:hover a.next-arrow{
 	left:-10px;
 }
-.section:last-child a.next-arrow{
+footer a.next-arrow{
 	transform: rotate(90deg);
 }
-.section:last-child a.next-arrow:hover{
+footer a.next-arrow:hover,
+footer a.next-arrow:active,
+footer a.next-arrow:focus{
 	transform: rotate(0deg);
+	background: transparent;
+	border: 0.3em solid currentColor;
 }
 
-/*.section:last-child a.next-arrow:hover{
+/*footer a.next-arrow:hover{
 	box-shadow: -3px 3px 0 #c52b2b , -4px 4px 0 #c52b2b , -5px 5px 0 #c52b2b , -6px 6px 0 #c52b2b , -7px 7px 0 #c52b2b , -8px 8px 0 #c52b2b , -9px 9px 0 #c52b2b , -10px 10px 0 #c52b2b , -11px 11px 0 #c52b2b , -12px 12px 0 #c52b2b , -13px 13px 0 #c52b2b , -14px 14px 0 #c52b2b , -15px 15px 0 #c52b2b , -16px 16px 0 #c52b2b , -17px 17px 0 #c52b2b , -18px 18px 0 #c52b2b , -19px 19px 0 #c52b2b , -20px 20px 0 #c52b2b ;
 }*/
 
-.section:last-child a.next-arrow i{
+footer a.next-arrow i{
 	font-size: inherit;
 }
 /* -------------- */
@@ -557,9 +571,9 @@ h2.page-title:after{
 /* -------------- */
 /* --- HOME --- */
 /* -------------- */
-.red .page{
+/* .red .page{
 	overflow: hidden;
-}
+} */
 
 .red .brand:before{
     height: 15px;
@@ -595,9 +609,24 @@ h2.page-title:after{
 .img-profile{
 	padding-bottom:5em;
 }
+/* .img-profile .filter {
+	position: relative;
+}
+.img-profile .filter::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	background: url(/images/profile.jpg), 50%/cover, radial-gradient(circle, #000, #fff) 0 0/6px 6px space;
+	background-blend-mode: screen;
+	filter: contrast(19);
+  content: "";
+} */
 .img-profile .figure{
 	position: relative;
 	display:block;
+	overflow: hidden;
 }
 .img-profile .figure:before {
 	content:"";
@@ -629,10 +658,10 @@ h2.page-title:after{
 .red .img-profile p{
 	position: absolute;
 	width:100%;
-	top:40%;
-    left: 0;
+	top:76%;
+  left: 0;
 	
-	color: currentColor;
+	color: white;
 	font-size: 8.2em;
 	font-weight: 300;
 	font-style: italic;
@@ -867,6 +896,9 @@ h2.page-title:after{
 }
 
 /* accordion */
+.yellow .panel-group {
+	margin: 0;
+}
 .yellow .panel-group .panel{
 	border-radius: 0;
 	border: 0;
@@ -978,7 +1010,7 @@ h2.page-title:after{
 }
 .yellow .panel-body .images:hover .img-project .project.freedompro {
 	transition: top 6.8s ease-in-out;
-	top: -339%;
+	top: -345%;
 }
 /* generali */
 .yellow .panel-body .img-project .project.generali {
@@ -986,7 +1018,7 @@ h2.page-title:after{
 }
 .yellow .panel-body .images:hover .img-project .project.generali {
 	transition: top 24.7s ease-in-out;
-	top: -1237.5%;
+	top: -1257%;
 }
 /* ray-ban */
 .yellow .panel-body .img-project .project.rayban {
@@ -1002,7 +1034,7 @@ h2.page-title:after{
 }
 .yellow .panel-body .images:hover .img-project .project.hm {
 	transition: top 7s ease-in-out;
-	top: -350%;
+	top: -356%;
 }
 /* prada */
 .yellow .panel-body .img-project .project.prada {
@@ -1011,6 +1043,14 @@ h2.page-title:after{
 .yellow .panel-body .images:hover .img-project .project.prada {
 	transition: top 9.9s ease-in-out;
 	top: -496.5%;
+}
+/* marchesi */
+.yellow .panel-body .img-project .project.marchesi {
+	transition: top 1s ease-in-out;
+}
+.yellow .panel-body .images:hover .img-project .project.marchesi {
+	transition: top 5.5s ease-in-out;
+	top: -274%;
 }
 
 .yellow .panel-body .images .zoom {
@@ -1157,9 +1197,9 @@ h2.page-title:after{
 }
 
 /* Footer Styles */
-footer {
+/* footer {
     margin: 50px 0;
-}
+} */
 
 /* Browsehappy for ie < 8 */
 .browsehappy{
@@ -1175,18 +1215,6 @@ footer {
 
 /* ANIMATIONS 
 ============================================================================= */
-
-.page.ng-enter {
-  transition:0.5s linear all;
-  position:relative;
-  opacity:0;
-  top:10px;
-}
-.page.ng-enter-active {
-  top:0;
-  opacity:1;
-}
-
 .yellow .panel-heading:hover .panel-title a{
 	margin-left:10px;
 }
@@ -1351,9 +1379,13 @@ footer {
 
   /*==========  Mobile First Method  ==========*/
 
+	@media only screen and (min-width : 260px) {
+		body{font-size:30%;}
+	}
+
   /* Custom, iPhone Retina */ 
   @media only screen and (min-width : 320px) {
-		body{font-size:50%;}
+		body{font-size:40%;}
 		
 		.red .title h1 span:last-child{letter-spacing:8px;}        
   }
@@ -1446,16 +1478,18 @@ footer {
 
   /* Small Devices, Tablets */
   @media only screen and (max-width : 768px) {
-		.menu li{margin:0 25px;}
+		.menu li{margin:0 20px;}
 		
 		.brand svg {width:150px;height:150px;}
 		
 		.red .brand:before, .red .brand:after {width:30px;height:10px;}
 		
 		.green .brand:before, .green .brand:after {height:30px;width:10px;}
+		.green h4 {margin-bottom:10px;}
 		
 		.yellow .brand:before {width:30px;height:10px;}
 		.yellow .brand:after {height:30px;width:10px;}
+		.yellow .panel-body hr {margin: 2rem 0;}
 		
 		.light-blue .brand:before {height:30px;width:10px;}
 		.light-blue .brand:after {width:30px;height:10px;}
