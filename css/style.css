@@ -238,6 +238,20 @@ body.show > *:not(#loader) {
 	width: 100px;
 	height: 100px;
 }
+#loader svg rect:first-child {
+	animation: moveRect 0.6s infinite linear;
+}
+#loader svg rect {
+	animation: moveRect 0.6s infinite linear 0.2s;
+}
+#loader svg rect:last-child {
+	animation: moveRect 0.6s infinite linear 0.4s;
+}
+@keyframes moveRect {
+	0% {transform: translateY(0px);}
+	50% {transform: translateY(20px);}
+	100% {transform: translateY(0px);}
+}
 /* -------------- */
 
 /* ACCORDION */
