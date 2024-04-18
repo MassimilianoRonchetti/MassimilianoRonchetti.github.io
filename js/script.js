@@ -4,7 +4,7 @@ new WOW().init();
 window.addEventListener('load', function () {
 
 	// LOADER
-	document.querySelector("#loader").style.display = "none";
+	//document.querySelector("#loader").style.display = "none";
 	document.querySelector("body").classList.add("show");
 
 	// NAVBAR

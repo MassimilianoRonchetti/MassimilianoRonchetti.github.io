@@ -215,13 +215,16 @@ form {
 /* LOADER */
 /* -------------- */
 body > *:not(#loader) {
-	display: none;
+	/* display: none; */
 	opacity: 0;
-	transition: opacity 0.35s ease-in-out;
+	transition: opacity 1s ease-in-out 1s;
 }
 body.show > *:not(#loader) {
-	display: block;
+	/* display: block; */
 	opacity: 1;
+}
+body.show > #loader {
+	opacity: 0;
 }
 #loader {
 	position: fixed;
@@ -233,6 +236,8 @@ body.show > *:not(#loader) {
 	max-width: 100px;
 	max-height: 100px;
 	transform: translate(-50%, -50%);
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
 }
 #loader svg {
 	width: 100px;
