@@ -37,10 +37,10 @@ window.addEventListener("load", function () {
 	}
 
 	// ON RESIZE
-	let resizeTimer;
 	window.addEventListener("resize", function () {
+		let resizeTimer;
 		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(handleResize, 250);
+		resizeTimer = setTimeout(handleResize(navBtn, acc), 250);
 	});
 });
 
@@ -71,11 +71,15 @@ function openPanel(el) {
 	}
 }
 
-function handleResize() {
-	openPanel(navBtn);
+function handleResize(navBtn, acc) {
+	if (navBtn.classList.contains("active")) {
+		navBtn.nextElementSibling.style.maxHeight = navBtn.nextElementSibling.scrollHeight + "px";
+	}
 	for (let i = 0; i < acc.length; i++) {
-		if (acc[i].closest(".panel").classList.contains("open")) {
+		if (acc[i].closest(".panel").classList.contains("panel-open")) {
 			openPanel(acc[i]);
+			acc[i].querySelector("i").classList.toggle("fa-angle-down");
+			acc[i].querySelector("i").classList.toggle("fa-angle-up");
 		}
 	}
 }

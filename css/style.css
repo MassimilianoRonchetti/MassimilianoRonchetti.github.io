@@ -225,6 +225,7 @@ body.show > *:not(#loader) {
 }
 body.show > #loader {
 	opacity: 0;
+	visibility: hidden;
 }
 #loader {
 	position: fixed;
@@ -237,7 +238,8 @@ body.show > #loader {
 	max-height: 100px;
 	transform: translate(-50%, -50%);
 	opacity: 1;
-	transition: opacity 1s ease-in-out;
+	visibility: visible;
+	transition: opacity 1s ease-in-out, visibility 0s linear 1s;
 }
 #loader svg {
 	width: 100px;
