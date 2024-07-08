@@ -1,8 +1,7 @@
 // WOW ANIMATIONS
 new WOW().init();
 
-window.addEventListener('load', function () {
-
+window.addEventListener("load", function () {
 	// LOADER
 	//document.querySelector("#loader").style.display = "none";
 	document.querySelector("body").classList.add("show");
@@ -12,12 +11,12 @@ window.addEventListener('load', function () {
 	const navBtnChilds = navBtn.querySelectorAll(".bars");
 
 	// LOCAL STORAGE FOR TOGGLE NAVBAR
-	if(localStorage.getItem("navbarOpen") == "true"){
+	if (localStorage.getItem("navbarOpen") == "true") {
 		toggleNavbarClasses(navBtn, navBtnChilds);
 		openPanel(navBtn);
 	}
-	navBtn.addEventListener("click", function() {
-		if(localStorage.getItem("navbarOpen") == "true") {
+	navBtn.addEventListener("click", function () {
+		if (localStorage.getItem("navbarOpen") == "true") {
 			localStorage.setItem("navbarOpen", "false");
 		} else {
 			localStorage.setItem("navbarOpen", "true");
@@ -30,7 +29,7 @@ window.addEventListener('load', function () {
 	const acc = document.getElementsByClassName("panel-heading");
 	let i;
 	for (i = 0; i < acc.length; i++) {
-		acc[i].addEventListener("click", function() {
+		acc[i].addEventListener("click", function () {
 			openPanel(this);
 			this.querySelector("i").classList.toggle("fa-angle-down");
 			this.querySelector("i").classList.toggle("fa-angle-up");
@@ -38,9 +37,10 @@ window.addEventListener('load', function () {
 	}
 
 	// ON RESIZE
-	window.addEventListener('resize', function() {
+	let resizeTimer;
+	window.addEventListener("resize", function () {
 		clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(handleResize, 250);
+		resizeTimer = setTimeout(handleResize, 250);
 	});
 });
 
@@ -51,13 +51,13 @@ window.addEventListener('load', function () {
 // TOGGLE NAVBAR
 function toggleNavbarClasses(el, childs) {
 	el.classList.toggle("active");
-	childs.forEach(element => {
+	childs.forEach((element) => {
 		element.classList.toggle("closeMenu");
 	});
 }
 
 // OPEN PANEL OF NAVABAR AND ACCORDION
-function openPanel(el){
+function openPanel(el) {
 	let nextEl = el.nextElementSibling;
 	let parentEl = el.closest(".panel");
 
@@ -66,15 +66,15 @@ function openPanel(el){
 	} else {
 		nextEl.style.maxHeight = nextEl.scrollHeight + "px";
 	}
-	if(parentEl){
+	if (parentEl) {
 		parentEl.classList.toggle("panel-open");
 	}
 }
 
-function handleResize(){
+function handleResize() {
 	openPanel(navBtn);
 	for (let i = 0; i < acc.length; i++) {
-		if (acc[i].closest(".panel").classList.contains('open')) {
+		if (acc[i].closest(".panel").classList.contains("open")) {
 			openPanel(acc[i]);
 		}
 	}
