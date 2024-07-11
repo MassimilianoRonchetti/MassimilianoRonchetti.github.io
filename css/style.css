@@ -1410,8 +1410,6 @@ footer a.next-arrow i{
   /* Custom, iPhone Retina */ 
   @media only screen and (min-width : 320px) {
 		body{font-size:40%;}
-		
-		.red .title h1 span:last-child{letter-spacing:8px;}        
   }
 
   /* Extra Small Devices, Phones */ 
@@ -1466,6 +1464,7 @@ footer a.next-arrow i{
 		.green a.resume {width:720px;}
 
 		.yellow .panel-body ul { column-count: 3;}
+		
   }
 
   /* Medium Devices, Desktops */
@@ -1521,16 +1520,33 @@ footer a.next-arrow i{
 		.red .img-profile p {letter-spacing:13px;font-size:7.2em;}
 		
 		.green .section:nth-child(2) a.resume{margin:1em 15px 0;}
+
+		.red .title h1 span:last-child{letter-spacing:8px;}  
+		.red p {font-size: 4.8em;}
+		.yellow .panel-title {font-size: 6em;}
+		.yellow .panel-body p {font-size: 4.8em;}
+		.yellow .panel-body ul li {font-size: 4.6em;}
+		.yellow .panel-body a.linkSite {font-size: 4.6em;}
+		footer p.read-next {font-size: 3.4em;}
 		
   }
 
   /* Extra Small Devices, Phones */ 
   @media only screen and (max-width : 480px) {
 		/*.btn-navbar{margin-bottom:10px;}*/
+		.btn-navbar .bars {
+			width: 20px;
+    height: 3px;
+		margin-bottom: 3px;
+		}
+		.btn-navbar .bars.closeMenu:last-child {
+			margin-top: -12px;
+		}
+
 		.menu li {margin:0 12px; display:block;}
-		.menu li a {font-size:6em;}
+		.menu li a {font-size:5.5em;}
 		
-		.brand svg {width:100px;height:100px;}
+		.brand svg {width:70px;height:70px;}
 		
 		.red .brand:before, .red .brand:after {width:22.5px;height:7.5px;}
 		
