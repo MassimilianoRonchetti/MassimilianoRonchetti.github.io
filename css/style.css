@@ -1548,15 +1548,15 @@ footer a.next-arrow i{
 		
 		.brand svg {width:70px;height:70px;}
 		
-		.red .brand:before, .red .brand:after {width:22.5px;height:7.5px;}
+		.red .brand:before, .red .brand:after {width:22.5px;height:5px;}
 		
-		.green .brand:before, .green .brand:after {height:22.5px;width:7.5px;}
+		.green .brand:before, .green .brand:after {height:22.5px;width:5px;}
 		
 		.yellow .brand:before {width:22.5px;height:5px;}
 		.yellow .brand:after {height:22.5px;width:5px;}
 		
-		.light-blue .brand:before {height:22.5px;width:7.5px;}
-		.light-blue .brand:after {width:22.5px;height:7.5px;}
+		.light-blue .brand:before {height:22.5px;width:5px;}
+		.light-blue .brand:after {width:22.5px;height:5px;}
 		
 		.red .img-profile p {letter-spacing:8px;font-size:6.2em;}	
   }
