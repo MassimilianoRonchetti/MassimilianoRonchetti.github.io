@@ -1,214 +1,298 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="it" class="no-js"> <!--<![endif]-->
-<head>
+<html lang="it" class="no-js">
+	<head>
+		<!-- Meta-Information -->
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Meta-Information -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="fragment" content="!">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png"> 
-    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">  
-    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png"> 
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"> 
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">  
-    <link rel="apple-touch-icon" href="/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png"> 
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">  
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">  
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">  
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">  
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png"> 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-        
-    <meta content="Massimiliano Ronchetti - Web Designer" name="application-name">
-    
-    <meta name="msapplication-TileColor" content="#FFFFFF">     
-    <meta name="msapplication-TileImage" content="/favicon-144.png">   
-    <meta name="msapplication-config" content="/browserconfig.xml">
-    
-    <title>Massimiliano Ronchetti - Web Designer & Frontend Developer - Como</title>
-	<meta content="Massimiliano Ronchetti, Web Designer, Siti Web, Graphic, Developer, HTML, CSS, Jquery, Bootstrap, Foundation, Dreamveawer, Photoshop, Illustrator, Como, Web Design Como, Siti Web Como, Realizzaione Siti Web Como, Realizzazione Grafica Como" name="keywords">
-	<meta content="Graphic & Web Designer di Como. Realizzo siti web e grafica pubblicitaria, benvenuti nel mio Portfolio." name="description">
-    <meta name="author" content="Massimiliano Ronchetti">
-    
-    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
-    <link rel="stylesheet" href="css/bootstrap-3-3-6.min.css">
+		<meta name="fragment" content="!" />
 
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- CSS Animate -->
-    <link rel="stylesheet" href="css/animate.min.css">
-    
-    <!-- CSS FontAwesome -->
-    <link rel="stylesheet" href="fonts/FontAwesome/css/font-awesome.min.css">
-    
-    <base href="/">
-    
-	<script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-84019650-1', 'auto');
-      ga('send', 'pageview');
-    
-    </script>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png" />
+		<link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+		<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+		<link rel="apple-touch-icon" href="/favicon-57.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
 
-</head>
-<body class="red">
-    <!--[if lt IE 9]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-        your browser</a> to improve your experience.</p>
-    <![endif]-->
+		<meta content="Massimiliano Ronchetti - Web Designer" name="application-name" />
 
-    <div id="loader">
-        <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-            <rect x="38" y="40" width="4" height="10" fill="#000"></rect>
-            <rect x="48" y="40" width="4" height="10" fill="#000"></rect>
-            <rect x="58" y="40" width="4" height="10" fill="#000"></rect>
-        </svg>
-    </div>
-    
-    <!-- Website Content -->
-    <div class="header">
-        <header>
-            <nav role="navigation" class="navbar">
-                <button type="button" class="btn btn-navbar wow fadeIn" data-wow-offset="1" >
-                    <span class="bars"></span>
-                    <span class="bars"></span>
-                    <span class="bars"></span>          
-                </button>
-                <div class="menu">
-                    <ul class="list-inline">
-                        <li><a href="/" class="active"><span>.</span>su di me</a></li>
-                        <li><a href="/pages/curriculum.html"><span>.</span>curriculum</a></li>
-                        <li><a href="/pages/portfolio.html"><span>.</span>portfolio</a></li>
-                        <li><a href="/pages/contact.html"><span>.</span>contatti</a></li>
-                    </ul>   
-                </div>
-            </nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="brand wow fadeIn" data-wow-offset="2" data-wow-delay="1s">
-                            <a href="/" class="brand-link">
-                                <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -4 200 204" enable-background="new 0 -4 200 204" xml:space="preserve">
-                                    <g>
-                                        <path fill="#D32F2F" d="M185.186,14.815v170.371H14.815V14.815H185.186 M200,0H0v200h200V0L200,0z"/>
-                                    </g>
-                                    <g>
-                                        <path fill="#D32F2F" d="M129.629,97.037L100,139.26L70.371,97.037v48.889H55.556V54.074C55.957,54.638,100,115.602,100,115.602
-                                            l44.446-61.527l-0.002,91.852h-14.815V97.037z"/>
-                                    </g>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </div>
-    <div class="page">
-        <div class="section">
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="/favicon-144.png" />
+		<meta name="msapplication-config" content="/browserconfig.xml" />
 
-            <div class="container">
-        
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="title wow zoomIn" data-wow-delay="2s" data-wow-duration="3s" data-wow-offset="3">
-                            <h1><span>Web Designer &amp; </span><br/><span>FRONT END DEVELOPER</span></h1>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-        
-            </div>
-            <!-- /.container -->
-        
-        </div>
-        <!-- /.section -->
-        
-        <div class="section">
-        
-            <div class="container">
-        
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="img-profile wow zoomInUp" data-wow-delay="1s" data-wow-duration="3s" data-wow-offset="4">
-                            <div class="figure">
-                                <div class="filter">
-                                    <img class="img-responsive profile" src="images/profile.jpg" alt="Web Designer Como">
-                                </div>
-                                <p class="wow fadeInUp" data-wow-delay="2s" data-wow-duration="3s" data-wow-offset="5"><span>M</span>assimiliano<br />Ronchetti</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 wow fadeInUp" data-wow-offset="6">
-                        <h2 class="page-title">.Su di me</h2>
-                        <p>Dopo aver completato i miei studi presso la scuola di <strong>Grafica Pubblicitaria</strong> a Como e aver frequentato un corso di <strong>Web Design</strong> a Milano, ho intrapreso il mio percorso nel mondo del <strong>Web</strong> nel 2008.</p>
-                        <p>Grazie all'esperienza acquisita lavorando in diverse <strong>Web Agency</strong> tra Como, Milano e Svizzera, ho acquisito competenze di <strong>grafica</strong>, <strong>web design</strong> e <strong>front-end</strong>.</p>
-                        <p>Le mie ultime esperienze professionali in collaborazione con aziende di prestigio come <strong>Prada</strong>, <strong>Ray-Ban</strong>, <strong>H&M</strong> e <strong>Generali</strong> mi hanno ulteriormente arricchito, completando il ruolo di <strong>Front End Developer</strong>.</p>
-                        <p>In particolare ho prestato una forte attenzione al corretto sviluppo dei layout ideati dai Designer UX/UI, garantendo un'implementazione impeccabile e ottimizzata per raggiungere i migliori risultati possibili.</p>
-                        <p>Questa continua evoluzione mi ha permesso di combinare le mie competenze legate al design con quelle di sviluppo, <strong>offrendo soluzioni web all'avanguardia</strong> che coniugano estetica e funzionalità per un'<strong>esperienza utente superiore</strong>.</p>
-                    </div>
-                </div>
-                <!-- /.row -->
-        
-            </div>
-            <!-- /.container -->
-        
-        </div>
-        <!-- /.section -->
-        
-    </div>
+		<title>Massimiliano Ronchetti - Frontend Developer & Web Designer</title>
+		<meta
+			content="Massimiliano Ronchetti, Web Designer, Siti Web, Graphic, Developer, HTML, CSS, Jquery, Bootstrap, Foundation, Dreamveawer, Photoshop, Illustrator, Como, Web Design Como, Siti Web Como, Realizzaione Siti Web Como, Realizzazione Grafica Como"
+			name="keywords"
+		/>
+		<meta content="Graphic & Web Designer di Como. Realizzo siti web e grafica pubblicitaria, benvenuti nel mio Portfolio." name="description" />
+		<meta name="author" content="Massimiliano Ronchetti" />
 
-    <footer class="footer">
-        
-        <div class="container">
-    
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="next">
-                        <p class="read-next">prosegui con</p>
-                        <p class="next-page">. curriculum</p>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <a class="pull-right next-arrow" href="/pages/curriculum.html">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- /.row -->
-    
-        </div>
-        <!-- /.container -->
-        
-    </footer>
-    
-    <!-- Vendor: Javascripts -->
-    
-    <!-- Plugin Javascripts -->
-    <script src="js/wow.min.js" defer></script>
+		<!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+		<link rel="stylesheet" href="css/bootstrap-3-3-6.min.css" />
 
-    <!-- App Javascripts -->
-    <script src="js/script.js" defer></script>
-</body>
+		<!-- CSS Styles -->
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- CSS Animate -->
+		<link rel="stylesheet" href="css/animate.min.css" />
+
+		<!-- CSS FontAwesome -->
+		<link rel="stylesheet" href="fonts/FontAwesome/css/font-awesome.min.css" />
+
+		<base href="/" />
+
+		<script>
+			(function (i, s, o, g, r, a, m) {
+				i["GoogleAnalyticsObject"] = r;
+				(i[r] =
+					i[r] ||
+					function () {
+						(i[r].q = i[r].q || []).push(arguments);
+					}),
+					(i[r].l = 1 * new Date());
+				(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m);
+			})(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+
+			ga("create", "UA-84019650-1", "auto");
+			ga("send", "pageview");
+		</script>
+	</head>
+	<body class="red">
+		<!--[if lt IE 9]>
+			<p class="browsehappy">
+				You are using an
+				<strong>outdated</strong>
+				browser. Please
+				<a href="http://browsehappy.com/">upgrade your browser</a>
+				to improve your experience.
+			</p>
+		<![endif]-->
+
+		<div id="loader">
+			<svg
+				version="1.1"
+				id="L9"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				x="0px"
+				y="0px"
+				viewBox="0 0 100 100"
+				enable-background="new 0 0 0 0"
+				xml:space="preserve"
+			>
+				<rect x="38" y="40" width="4" height="10" fill="#000"></rect>
+				<rect x="48" y="40" width="4" height="10" fill="#000"></rect>
+				<rect x="58" y="40" width="4" height="10" fill="#000"></rect>
+			</svg>
+		</div>
+
+		<!-- Website Content -->
+		<div class="header">
+			<header>
+				<nav role="navigation" class="navbar">
+					<button type="button" class="btn btn-navbar wow fadeIn" data-wow-offset="1">
+						<span class="bars"></span>
+						<span class="bars"></span>
+						<span class="bars"></span>
+					</button>
+					<div class="menu">
+						<ul class="list-inline">
+							<li>
+								<a href="/" class="active">
+									<span>.</span>
+									su di me
+								</a>
+							</li>
+							<li>
+								<a href="/pages/curriculum.html">
+									<span>.</span>
+									curriculum
+								</a>
+							</li>
+							<li>
+								<a href="/pages/portfolio.html">
+									<span>.</span>
+									portfolio
+								</a>
+							</li>
+							<li>
+								<a href="/pages/contact.html">
+									<span>.</span>
+									contatti
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="brand wow fadeIn" data-wow-offset="2" data-wow-delay="1s">
+								<a href="/" class="brand-link">
+									<svg
+										version="1.1"
+										id="logo"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 -4 200 204"
+										enable-background="new 0 -4 200 204"
+										xml:space="preserve"
+									>
+										<g>
+											<path fill="#D32F2F" d="M185.186,14.815v170.371H14.815V14.815H185.186 M200,0H0v200h200V0L200,0z" />
+										</g>
+										<g>
+											<path
+												fill="#D32F2F"
+												d="M129.629,97.037L100,139.26L70.371,97.037v48.889H55.556V54.074C55.957,54.638,100,115.602,100,115.602
+                                            l44.446-61.527l-0.002,91.852h-14.815V97.037z"
+											/>
+										</g>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="page">
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<div class="title wow zoomIn" data-wow-delay="2s" data-wow-duration="3s" data-wow-offset="3">
+								<h1>
+									<span>Web Designer &amp;</span>
+									<br />
+									<span>FRONT END DEVELOPER</span>
+								</h1>
+							</div>
+						</div>
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</div>
+			<!-- /.section -->
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<div class="img-profile wow zoomInUp" data-wow-delay="1s" data-wow-duration="3s" data-wow-offset="4">
+								<div class="figure">
+									<div class="filter">
+										<img class="img-responsive profile" src="images/profile.jpg" alt="Web Designer Como" />
+									</div>
+									<p class="wow fadeInUp" data-wow-delay="2s" data-wow-duration="3s" data-wow-offset="5">
+										<span>M</span>
+										assimiliano
+										<br />
+										Ronchetti
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 wow fadeInUp" data-wow-offset="6">
+							<h2 class="page-title">.Su di me</h2>
+							<p>
+								Dopo aver completato i miei studi presso la scuola di
+								<strong>Grafica Pubblicitaria</strong>
+								a Como e aver frequentato un corso di
+								<strong>Web Design</strong>
+								a Milano, ho intrapreso il mio percorso nel mondo del
+								<strong>Web</strong>
+								nel 2008.
+							</p>
+							<p>
+								Grazie all'esperienza acquisita lavorando in diverse
+								<strong>Web Agency</strong>
+								tra Como, Milano e Svizzera, ho acquisito competenze di
+								<strong>grafica</strong>
+								,
+								<strong>web design</strong>
+								e
+								<strong>front-end</strong>
+								.
+							</p>
+							<p>
+								Le mie ultime esperienze professionali in collaborazione con aziende di prestigio come
+								<strong>Prada</strong>
+								,
+								<strong>Ray-Ban</strong>
+								,
+								<strong>H&M</strong>
+								e
+								<strong>Generali</strong>
+								mi hanno ulteriormente arricchito, completando il ruolo di
+								<strong>Front End Developer</strong>
+								.
+							</p>
+							<p>
+								In particolare ho prestato una forte attenzione al corretto sviluppo dei layout ideati dai Designer UX/UI, garantendo
+								un'implementazione impeccabile e ottimizzata per raggiungere i migliori risultati possibili.
+							</p>
+							<p>
+								Questa continua evoluzione mi ha permesso di combinare le mie competenze legate al design con quelle di sviluppo,
+								<strong>offrendo soluzioni web all'avanguardia</strong>
+								che coniugano estetica e funzionalità per un'
+								<strong>esperienza utente superiore</strong>
+								.
+							</p>
+						</div>
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</div>
+			<!-- /.section -->
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-8">
+						<div class="next">
+							<p class="read-next">prosegui con</p>
+							<p class="next-page">. curriculum</p>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<a class="pull-right next-arrow" href="/pages/curriculum.html">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</footer>
+
+		<!-- Vendor: Javascripts -->
+
+		<!-- Plugin Javascripts -->
+		<script src="js/wow.min.js" defer></script>
+
+		<!-- App Javascripts -->
+		<script src="js/script.js" defer></script>
+	</body>
 </html>

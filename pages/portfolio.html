@@ -1,488 +1,678 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="it" class="no-js"> <!--<![endif]-->
-<head>
+<html lang="it" class="no-js">
+	<head>
+		<!-- Meta-Information -->
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Meta-Information -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="fragment" content="!">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="../favicon.ico">
-    <link rel="icon" type="image/png" sizes="196x196" href="../favicon-192.png"> 
-    <link rel="icon" type="image/png" sizes="160x160" href="../favicon-160.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96.png">  
-    <link rel="icon" type="image/png" sizes="64x64" href="../favicon-64.png"> 
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png"> 
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">  
-    <link rel="apple-touch-icon" href="../favicon-57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../favicon-114.png"> 
-    <link rel="apple-touch-icon" sizes="72x72" href="../favicon-72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../favicon-144.png">  
-    <link rel="apple-touch-icon" sizes="60x60" href="../favicon-60.png">  
-    <link rel="apple-touch-icon" sizes="120x120" href="../favicon-120.png">  
-    <link rel="apple-touch-icon" sizes="76x76" href="../favicon-76.png">  
-    <link rel="apple-touch-icon" sizes="152x152" href="../favicon-152.png"> 
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon-180.png">
-        
-    <meta content="Massimiliano Ronchetti - Web Designer" name="application-name">
-    
-    <meta name="msapplication-TileColor" content="#FFFFFF">     
-    <meta name="msapplication-TileImage" content="../favicon-144.png">   
-    <meta name="msapplication-config" content="../browserconfig.xml">
-    
-    <title>Massimiliano Ronchetti - Portfolio</title>
-	<meta content="Massimiliano Ronchetti, Web Designer, Siti Web, Graphic, Developer, HTML, CSS, Jquery, Bootstrap, Foundation, Dreamveawer, Photoshop, Illustrator, Como, Web Design Como, Siti Web Como, Realizzaione Siti Web Como, Realizzazione Grafica Como" name="keywords">
-	<meta content="Graphic & Web Designer di Como. Realizzo siti web e grafica pubblicitaria, benvenuti nel mio Portfolio." name="description">
-    <meta name="author" content="Massimiliano Ronchetti">
-    
-    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
-    <link rel="stylesheet" href="../css/bootstrap-3-3-6.min.css">
+		<meta name="fragment" content="!" />
 
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="../css/style.css">
-    
-    <!-- CSS Animate -->
-    <link rel="stylesheet" href="../css/animate.min.css">
-    
-    <!-- CSS FontAwesome -->
-    <link rel="stylesheet" href="../fonts/FontAwesome/css/font-awesome.min.css">
-    
-    <base href="/">
-    
-	<script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-84019650-1', 'auto');
-      ga('send', 'pageview');
-    
-    </script>
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<link rel="icon" sizes="16x16 32x32 64x64" href="../favicon.ico" />
+		<link rel="icon" type="image/png" sizes="196x196" href="../favicon-192.png" />
+		<link rel="icon" type="image/png" sizes="160x160" href="../favicon-160.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96.png" />
+		<link rel="icon" type="image/png" sizes="64x64" href="../favicon-64.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png" />
+		<link rel="apple-touch-icon" href="../favicon-57.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../favicon-114.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../favicon-72.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="../favicon-144.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="../favicon-60.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="../favicon-120.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="../favicon-76.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="../favicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../favicon-180.png" />
 
-</head>
-<body class="yellow">
-    <!--[if lt IE 9]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-        your browser</a> to improve your experience.</p>
-    <![endif]-->
+		<meta content="Massimiliano Ronchetti - Web Designer" name="application-name" />
 
-    <div id="loader">
-        <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-            <rect x="38" y="40" width="4" height="10" fill="#000"></rect>
-            <rect x="48" y="40" width="4" height="10" fill="#000"></rect>
-            <rect x="58" y="40" width="4" height="10" fill="#000"></rect>
-        </svg>
-    </div>
-    
-    <!-- Website Content -->
-    <div class="header">
-        <header>
-            <nav role="navigation" class="navbar">
-                <button type="button" class="btn btn-navbar wow fadeIn" data-wow-offset="1" >
-                    <span class="bars"></span>
-                    <span class="bars"></span>
-                    <span class="bars"></span>          
-                </button>
-                <div class="menu">
-                    <ul class="list-inline">
-                        <li><a href="/"><span>.</span>su di me</a></li>
-                        <li><a href="/pages/curriculum.html"><span>.</span>curriculum</a></li>
-                        <li><a href="/pages/portfolio.html" class="active"><span>.</span>portfolio</a></li>
-                        <li><a href="/pages/contact.html"><span>.</span>contatti</a></li>
-                    </ul>     
-                </div>
-            </nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="brand wow fadeIn" data-wow-offset="2" data-wow-delay="1s">
-                            <a href="/" class="brand-link">
-                                <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -4 200 204" enable-background="new 0 -4 200 204" xml:space="preserve">
-                                    <g>
-                                        <path fill="#D32F2F" d="M185.186,14.815v170.371H14.815V14.815H185.186 M200,0H0v200h200V0L200,0z"/>
-                                    </g>
-                                    <g>
-                                        <path fill="#D32F2F" d="M129.629,97.037L100,139.26L70.371,97.037v48.889H55.556V54.074C55.957,54.638,100,115.602,100,115.602
-                                            l44.446-61.527l-0.002,91.852h-14.815V97.037z"/>
-                                    </g>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </div>
-    <div class="page">
-        <div class="section" ng-controller="WowCtrl">
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="../favicon-144.png" />
+		<meta name="msapplication-config" content="../browserconfig.xml" />
 
-            <div class="container">
-        
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="title wow zoomIn" data-wow-delay="2s" data-wow-duration="3s" data-wow-offset="3">
-                            <h1><span>play</span> <span>for</span> <span>fun*</span><br/><span>with code</span></h1>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-        
-            </div>
-            <!-- /.container -->
-        
-        </div>
-        <!-- /.section -->
-        
-        <div class="section">
+		<title>Massimiliano Ronchetti - Portfolio</title>
+		<meta
+			content="Massimiliano Ronchetti, Web Designer, Siti Web, Graphic, Developer, HTML, CSS, Jquery, Bootstrap, Foundation, Dreamveawer, Photoshop, Illustrator, Como, Web Design Como, Siti Web Como, Realizzaione Siti Web Como, Realizzazione Grafica Como"
+			name="keywords"
+		/>
+		<meta content="Graphic & Web Designer di Como. Realizzo siti web e grafica pubblicitaria, benvenuti nel mio Portfolio." name="description" />
+		<meta name="author" content="Massimiliano Ronchetti" />
 
-            <div class="container">
-        
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="cont-page-title">
-                            <h2 class="page-title">. Portfolio</h2>
-                        </div>
-                        <!-- <div class="cont-page-text">
+		<!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+		<link rel="stylesheet" href="../css/bootstrap-3-3-6.min.css" />
+
+		<!-- CSS Styles -->
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<!-- CSS Animate -->
+		<link rel="stylesheet" href="../css/animate.min.css" />
+
+		<!-- CSS FontAwesome -->
+		<link rel="stylesheet" href="../fonts/FontAwesome/css/font-awesome.min.css" />
+
+		<base href="/" />
+
+		<script>
+			(function (i, s, o, g, r, a, m) {
+				i["GoogleAnalyticsObject"] = r;
+				(i[r] =
+					i[r] ||
+					function () {
+						(i[r].q = i[r].q || []).push(arguments);
+					}),
+					(i[r].l = 1 * new Date());
+				(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m);
+			})(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+
+			ga("create", "UA-84019650-1", "auto");
+			ga("send", "pageview");
+		</script>
+	</head>
+	<body class="yellow">
+		<!--[if lt IE 9]>
+			<p class="browsehappy">
+				You are using an
+				<strong>outdated</strong>
+				browser. Please
+				<a href="http://browsehappy.com/">upgrade your browser</a>
+				to improve your experience.
+			</p>
+		<![endif]-->
+
+		<div id="loader">
+			<svg
+				version="1.1"
+				id="L9"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				x="0px"
+				y="0px"
+				viewBox="0 0 100 100"
+				enable-background="new 0 0 0 0"
+				xml:space="preserve"
+			>
+				<rect x="38" y="40" width="4" height="10" fill="#000"></rect>
+				<rect x="48" y="40" width="4" height="10" fill="#000"></rect>
+				<rect x="58" y="40" width="4" height="10" fill="#000"></rect>
+			</svg>
+		</div>
+
+		<!-- Website Content -->
+		<div class="header">
+			<header>
+				<nav role="navigation" class="navbar">
+					<button type="button" class="btn btn-navbar wow fadeIn" data-wow-offset="1">
+						<span class="bars"></span>
+						<span class="bars"></span>
+						<span class="bars"></span>
+					</button>
+					<div class="menu">
+						<ul class="list-inline">
+							<li>
+								<a href="/">
+									<span>.</span>
+									su di me
+								</a>
+							</li>
+							<li>
+								<a href="/pages/curriculum.html">
+									<span>.</span>
+									curriculum
+								</a>
+							</li>
+							<li>
+								<a href="/pages/portfolio.html" class="active">
+									<span>.</span>
+									portfolio
+								</a>
+							</li>
+							<li>
+								<a href="/pages/contact.html">
+									<span>.</span>
+									contatti
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="brand wow fadeIn" data-wow-offset="2" data-wow-delay="1s">
+								<a href="/" class="brand-link">
+									<svg
+										version="1.1"
+										id="logo"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 -4 200 204"
+										enable-background="new 0 -4 200 204"
+										xml:space="preserve"
+									>
+										<g>
+											<path fill="#D32F2F" d="M185.186,14.815v170.371H14.815V14.815H185.186 M200,0H0v200h200V0L200,0z" />
+										</g>
+										<g>
+											<path
+												fill="#D32F2F"
+												d="M129.629,97.037L100,139.26L70.371,97.037v48.889H55.556V54.074C55.957,54.638,100,115.602,100,115.602
+                                            l44.446-61.527l-0.002,91.852h-14.815V97.037z"
+											/>
+										</g>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="page">
+			<div class="section" ng-controller="WowCtrl">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<div class="title wow zoomIn" data-wow-delay="2s" data-wow-duration="3s" data-wow-offset="3">
+								<h1>
+									<span>play</span>
+									<span>for</span>
+									<span>fun*</span>
+									<br />
+									<span>with code</span>
+								</h1>
+							</div>
+						</div>
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</div>
+			<!-- /.section -->
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="cont-page-title">
+								<h2 class="page-title">. Portfolio</h2>
+							</div>
+							<!-- <div class="cont-page-text">
                             <p><span>+800</span> Siti Web realizzati in Web Agency attraverso CMS Proprietari</p>
                             <p><span>+100</span> Layout Grafici creati ad hoc per qualsiasi esigenza del cliente</p>
                             <h3>Some works...</h3>
                         </div> -->
-                        <div class="panel-group">
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a role="button">
-                                            <span>.Freedompro</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-content">
-                                    <div class="panel-body">
-                                        <h4>Frontend Developer</h4>
-                                        <div class="border">
-                                            <div class="images">
-                                                <div class="zoom">
-                                                    <img src="images/portfolio/portfolio_background.jpg" class="img-responsive" alt="Freedompro e-commerce website" />
-                                                    <div class="img-project">
-                                                        <img src="images/portfolio/portfolio_freedompro.jpg" class="project freedompro" alt="Macbook monitor fronteend development" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h4>E-commerce Freedompro:</h4>
-                                        <p>Nel corso della mia esperienza come Frontend Developer presso Freedompro ho gestito in completa autonomia lo sviluppo dell'e-commerce freedompro.eu, un'azienda italiana presente nel settore dell'IoT e della domotica.</p>
-                                        <p>Il sito è stato progettato per presentare chiaramente le soluzioni innovative di Freedompro, utilizzando la piattaforma Shopify e una gamma di linguaggi di programmazione.</p>
-                                        <p>Grazie a un design intuitivo e accattivante, i clienti possono facilmente esplorare e acquistare i dispositivi IoT di Freedompro, riflettendo lo spirito innovativo dell'azienda nel settore.</p>
-                                        <hr />
-                                        <h4>App Freedompro:</h4>
-                                        <p>Ho contribuito allo sviluppo dell'app Freedompro per iOS e Android, supportando il team con le tecnologie Angular, TypeScript, Ionic e Redux.</p>
-                                        <p>L'app consente agli utenti di gestire i dispositivi IoT per la domotica della casa in modo intuitivo e efficiente, migliorando la qualità dei prodotti di Freedompro.</p>
-                                        <hr />
-                                        <ul>
-                                            <li>.Mac OS</li>
-                                            <li>.Liquid</li>
-                                            <li>.HTML</li>
-                                            <li>.CSS</li>
-                                            <li>.SCSS</li>
-                                            <li>.JSON</li>
-                                            <li>.Javascript</li>
-                                            <li>.Typescript</li>
-                                            <li>.JQuery</li>
-                                            <li>.Angular</li>
-                                            <li>.Ionic</li>
-                                            <li>.Shopify</li>
-                                            <li>.Shopify CLI</li>
-                                            <li>.Shopify Apps</li>
-                                            <li>.Git</li>
-                                            <li>.Atlasssian Jira</li>
-                                            <li>.Atlassian Confluence</li>
-                                            <li>.Atlasssian SourceTree</li>
-                                            <li>.Atlassian Bitbucket</li>
-                                            <li>.Scrollviewport</li>
-                                            <li>.Visual Stuidio Code</li>
-                                            <li>.Adobe Photoshop</li>
-                                            <li>.Google Search Console</li>
-                                            <li>.PageSpeed Insights</li>
-                                            <li>.Ottimizzazione SEO</li>
-                                            <li>.Metodologia Agile</li>
-                                        </ul>
-                                        <hr />
-                                        <a href="https://freedompro.eu" class="linkSite" target="_blank"><i class="fa fa-external-link"></i> freedompro.eu</a>
-                                        <hr />
-                                        <a href="https://apps.apple.com/it/app/freedompro/id1598082027" class="linkSite" target="_blank"><i class="fa fa-external-link"></i> Freedompro app</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a role="button">
-                                            <span>.Generali</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-content">
-                                    <div class="panel-body">
-                                        <h4>Frontend Developer</h4>
-                                        <div class="border">
-                                            <div class="images">
-                                                <div class="zoom">
-                                                    <img src="images/portfolio/portfolio_background.jpg" class="img-responsive" alt="Freedompro e-commerce website" />
-                                                    <div class="img-project">
-                                                        <img src="images/portfolio/portfolio_generali.jpg" class="project generali" alt="Macbook monitor fronteend development" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>Durante il mio incarico presso l'headquarter di Generali, in collaborazione con il team di design Fjord di Accenture e il team di NTT Data, ho avuto la possibilità di guidare un piccolo team di 2 persone per sviluppare il rinnovo dell'interfaccia web del sito generali.it.</p>
-                                        <p>Il nostro obiettivo: creare un'esperienza utente coinvolgente e intuitiva, allineata agli standard più elevati del settore.</p>
-                                        <p>Il risultato è stato un sito web moderno e responsivo, che riflette l'impegno di Generali nell'offrire un'esperienza digitale all'avanguardia per i propri clienti.</p>
-                                        <hr />
-                                        <ul>
-                                            <li>.Mac OS</li>
-                                            <li>.pug</li>
-                                            <li>.SCSS</li>
-                                            <li>.JSON</li>
-                                            <li>.JQuery</li>
-                                            <li>.Bootstrap</li>
-                                            <li>.npm</li>
-                                            <li>.Gulp.js</li>
-                                            <li>.Node.js</li>
-                                            <li>.Git</li>
-                                            <li>.Atlassian SourceTree</li>
-                                            <li>.Visual Stuidio Code</li>
-                                            <li>.Zeplin</li>
-                                            <li>.Metodologia Agile</li>
-                                        </ul>
-                                        <hr />
-                                        <a href="https://www.generali.it" class="linkSite" target="_blank"><i class="fa fa-external-link"></i> genarali.it</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a role="button">
-                                            <span>.Ray-Ban</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-content">
-                                    <div class="panel-body">
-                                        <h4>Frontend Developer</h4>
-                                        <div class="border">
-                                            <div class="images">
-                                                <div class="zoom">
-                                                    <img src="images/portfolio/portfolio_background.jpg" class="img-responsive" alt="Luxottica e-commerce website" />
-                                                    <div class="img-project">
-                                                        <img src="images/portfolio/portfolio_rayban.jpg" class="project rayban" alt="Front end development of Rayban e-commerce" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>Durante il mio ruolo all'interno del team frontend di Luxottica, ho avuto il privilegio di lavorare gran parte del tempo sull'e-commerce di Ray-Ban, collaborando attivamente con i dipartimenti di Design, UX, IT, Copywriting, Prodotto e Marketing. In stretto contatto con i Project Manager, ho sostenuto il team frontend nel sito web di Ray-Ban, effettuando modifiche, correzioni di bug e implementazioni di nuovi contenuti.</p>
-                                        <p>Uno dei progetti più significativi a cui ho contribuito è stata la creazione di una landing page dedicata alla collaborazione con Peggy Gou (#FeelYourBeat) per il lancio di due varianti di eyewear: "Square and Oval by Peggy Gou".</p>
-                                        <hr />
-                                        <ul>
-                                            <li>.Mac OS</li>
-                                            <li>.HTML</li>
-                                            <li>.CSS</li>
-                                            <li>.JSON</li>
-                                            <li>.JQuery</li>
-                                            <li>.Visual Stuidio Code</li>
-                                            <li>.IBM Websphere</li>
-                                            <li>.Atlasssian Jira</li>
-                                            <li>.Asana</li>
-                                            <li>.Photoshop</li>
-                                        </ul>
-                                        <hr />
-                                        <a href="https://www.ray-ban.com" class="linkSite" target="_blank"><i class="fa fa-external-link"></i> ray-ban.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a role="button">
-                                            <span>.H&M</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-content">
-                                    <div class="panel-body">
-                                        <h4>Frontend Developer</h4>
-                                        <div class="border">
-                                            <div class="images">
-                                                <div class="zoom">
-                                                    <img src="images/portfolio/portfolio_background.jpg" class="img-responsive" alt="H&M e-commerce website" />
-                                                    <div class="img-project">
-                                                        <img src="images/portfolio/portfolio_hm.jpg" class="project hm" alt="Front end development of H&M e-commerce" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>In questo progetto ho collaborato strettamente con il team di sviluppo interno di Accenture, una Web Agency svedese e gli altri stakeholder per garantire un'efficace integrazione del sito su AEM.</p>
-                                        <p>Il processo partiva da un'analisi dettagliata del codice frontend per garantire la qualità e l'efficienza delle funzionalità implementate dalla Web Agency.</p>
-                                        <p>In un secondo momento venivano implementati i contenuti all'interno di Adobe Experience Manager (AEM), personalizzando l'interfaccia del CMS per consentire la gestione dei contenuti da parte del cliente finale.</p>
-                                        <p>Il mio contributo ha migliorato l'efficienza e la flessibilità nella gestione dei contenuti del sito e-commerce di H&M.</p>
-                                        <hr />
-                                        <ul>
-                                            <li>.Windows</li>
-                                            <li>.HTML</li>
-                                            <li>.CSS</li>
-                                            <li>.JQuery</li>
-                                            <li>.Adobe Experience Manager</li>
-                                            <li>.Visual Stuidio Code</li>
-                                        </ul>
-                                        <hr />
-                                        <a href="https://www2.hm.com" class="linkSite" target="_blank"><i class="fa fa-external-link"></i> hm.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a role="button">
-                                            <span>.Prada</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-content">
-                                    <div class="panel-body">
-                                        <h4>Frontend Developer</h4>
-                                        <div class="border">
-                                            <div class="images">
-                                                <div class="zoom">
-                                                    <img src="images/portfolio/portfolio_background.jpg" class="img-responsive" alt="Prada e-commerce website" />
-                                                    <div class="img-project">
-                                                        <img src="images/portfolio/portfolio_prada.jpg" class="project prada" alt="Front end development of Prada e-commerce" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>Nel corso del mio impiego per il re-design completo dell'e-commerce Prada.com, ho avuto il privilegio di lavorare all'interno di un team front-end di HRM per portare nuova vita al prestigioso brand di moda.</p>
-                                        <p>Lavorando a stretto contatto con il team di sviluppo dell'agenzia HRM, ho preparato il terreno per l'implementazione dei componenti sviluppati nel CMS Adobe Experience Manager.</p>
-                                        <p>Ogni componente sviluppato è stato progettato con l'utente finale in mente, garantendo un'esperienza di navigazione fluida e intuitiva su Prada.com. La scalabilità e la facilità di personalizzazione dei componenti hanno permesso al team di HRM di adattare rapidamente il sito alle esigenze in continua evoluzione del marchio.</p>
-                                        <p>Partendo dalle grafiche create dai designer di Deloitte, ho trasformato la loro visione in realtà digitale, sviluppando il codice statico per diverse sezioni del sito.</p>
-                                        <hr />
-                                        <ul>
-                                            <li>.Mac OS</li>
-                                            <li>.HTML</li>
-                                            <li>.CSS</li>
-                                            <li>.SCSS</li>
-                                            <li>.JQuery</li>
-                                            <li>.Bootstrap</li>
-                                            <li>.Adobe Experience Manager</li>
-                                            <li>.Git</li>
-                                            <li>.Atlassian Jira</li>
-                                            <li>.Visual Stuidio Code</li>
-                                            <li>.Sketch</li>
-                                        </ul>
-                                        <hr />
-                                        <a href="https://www.prada.com" class="linkSite" target="_blank"><i class="fa fa-external-link"></i> prada.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a role="button">
-                                            <span>.Pasticceria Marchesi 1824</span>
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="panel-content">
-                                    <div class="panel-body">
-                                        <h4>Frontend Developer</h4>
-                                        <div class="border">
-                                            <div class="images">
-                                                <div class="zoom">
-                                                    <img src="images/portfolio/portfolio_background.jpg" class="img-responsive" alt="Prada e-commerce website" />
-                                                    <div class="img-project">
-                                                        <img src="images/portfolio/portfolio_marchesi_1824.jpg" class="project marchesi" alt="Front end development of Pasticceria Marchesi 1824 e-commerce" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>Lavorando in stretta sinergia con un piccolo team di Reply, ho garantito un flusso di lavoro efficace e coordinato, condividendo idee e soluzioni per portare in vita il nuovo design dell'e-commerce di Pasticceria Marchesi.</p>
-                                        <p>La mia principale responsabilità è stata lavorare esclusivamente sul codice CSS per tradurre il design fornito da terzi in una nuova e coinvolgente esperienza visiva per gli utenti del sito. Attraverso il CSS, ho modellato l'aspetto e la sensazione del sito, creando layout fluidi e accattivanti.</p>
-                                        <p>Utilizzando il sitema di gestione dei contenuti: Oracle WCS e mantenendo la struttura HTML pre-impostata, ho integrato il nuovo design senza compromettere la funzionalità esistente del sito e-commerce, garantendo una transizione senza intoppi e un'esperienza utente coerente.</p>
-                                        <p>Il risultato finale è stato un e-commerce Pasticceria Marchesi rinnovato e affascinante, che unisce il gusto tradizionale della prestigiosa pasticceria con un design moderno e accattivante. Offrendo ai clienti un'esperienza online migliore.</p>
-                                        <hr />
-                                        <ul>
-                                            <li>.Mac OS</li>
-                                            <li>.CSS</li>
-                                            <li>.Oracle WCS</li>
-                                            <li>.Visual Stuidio Code</li>
-                                            <li>.Photoshop</li>
-                                        </ul>
-                                        <hr />
-                                        <a href="https://www.pasticceriamarchesi.com" class="linkSite" target="_blank"><i class="fa fa-external-link"></i> pasticceriamarchesi.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <!-- /.row -->
-                
-            </div>
-            <!-- /.container -->
-        
-        </div>
-        <!-- /.section -->
-                
-    </div>
+							<div class="panel-group">
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a role="button">
+												<span>.Freedompro</span>
+												<i class="fa fa-angle-down"></i>
+											</a>
+										</h4>
+									</div>
+									<div class="panel-content">
+										<div class="panel-body">
+											<h4>Frontend Developer</h4>
+											<div class="border">
+												<div class="images">
+													<div class="zoom">
+														<img
+															src="images/portfolio/portfolio_background.jpg"
+															class="img-responsive"
+															alt="Freedompro e-commerce website"
+														/>
+														<div class="img-project">
+															<img
+																src="images/portfolio/portfolio_freedompro.jpg"
+																class="project freedompro"
+																alt="Macbook monitor fronteend development"
+															/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<h4>E-commerce Freedompro:</h4>
+											<p>
+												Nel corso della mia esperienza come Frontend Developer presso Freedompro ho gestito in completa
+												autonomia lo sviluppo dell'e-commerce freedompro.eu, un'azienda italiana presente nel settore dell'IoT
+												e della domotica.
+											</p>
+											<p>
+												Il sito è stato progettato per presentare chiaramente le soluzioni innovative di Freedompro,
+												utilizzando la piattaforma Shopify e una gamma di linguaggi di programmazione.
+											</p>
+											<p>
+												Grazie a un design intuitivo e accattivante, i clienti possono facilmente esplorare e acquistare i
+												dispositivi IoT di Freedompro, riflettendo lo spirito innovativo dell'azienda nel settore.
+											</p>
+											<hr />
+											<h4>App Freedompro:</h4>
+											<p>
+												Ho contribuito allo sviluppo dell'app Freedompro per iOS e Android, supportando il team con le
+												tecnologie Angular, TypeScript, Ionic e Redux.
+											</p>
+											<p>
+												L'app consente agli utenti di gestire i dispositivi IoT per la domotica della casa in modo intuitivo e
+												efficiente, migliorando la qualità dei prodotti di Freedompro.
+											</p>
+											<hr />
+											<ul>
+												<li>.Mac OS</li>
+												<li>.Liquid</li>
+												<li>.HTML</li>
+												<li>.CSS</li>
+												<li>.SCSS</li>
+												<li>.JSON</li>
+												<li>.Javascript</li>
+												<li>.Typescript</li>
+												<li>.JQuery</li>
+												<li>.Angular</li>
+												<li>.Ionic</li>
+												<li>.Shopify</li>
+												<li>.Shopify CLI</li>
+												<li>.Shopify Apps</li>
+												<li>.Git</li>
+												<li>.Atlasssian Jira</li>
+												<li>.Atlassian Confluence</li>
+												<li>.Atlasssian SourceTree</li>
+												<li>.Atlassian Bitbucket</li>
+												<li>.Scrollviewport</li>
+												<li>.Visual Stuidio Code</li>
+												<li>.Adobe Photoshop</li>
+												<li>.Google Search Console</li>
+												<li>.PageSpeed Insights</li>
+												<li>.Ottimizzazione SEO</li>
+												<li>.Metodologia Agile</li>
+											</ul>
+											<hr />
+											<a href="https://freedompro.eu" class="linkSite" target="_blank">
+												<i class="fa fa-external-link"></i>
+												freedompro.eu
+											</a>
+											<hr />
+											<a href="https://apps.apple.com/it/app/freedompro/id1598082027" class="linkSite" target="_blank">
+												<i class="fa fa-external-link"></i>
+												Freedompro app
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a role="button">
+												<span>.Generali</span>
+												<i class="fa fa-angle-down"></i>
+											</a>
+										</h4>
+									</div>
+									<div class="panel-content">
+										<div class="panel-body">
+											<h4>Frontend Developer</h4>
+											<div class="border">
+												<div class="images">
+													<div class="zoom">
+														<img
+															src="images/portfolio/portfolio_background.jpg"
+															class="img-responsive"
+															alt="Freedompro e-commerce website"
+														/>
+														<div class="img-project">
+															<img
+																src="images/portfolio/portfolio_generali.jpg"
+																class="project generali"
+																alt="Macbook monitor fronteend development"
+															/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p>
+												Durante il mio incarico presso l'headquarter di Generali, in collaborazione con il team di design
+												Fjord di Accenture e il team di NTT Data, ho avuto la possibilità di guidare un piccolo team di 2
+												persone per sviluppare il rinnovo dell'interfaccia web del sito generali.it.
+											</p>
+											<p>
+												Il nostro obiettivo: creare un'esperienza utente coinvolgente e intuitiva, allineata agli standard più
+												elevati del settore.
+											</p>
+											<p>
+												Il risultato è stato un sito web moderno e responsivo, che riflette l'impegno di Generali nell'offrire
+												un'esperienza digitale all'avanguardia per i propri clienti.
+											</p>
+											<hr />
+											<ul>
+												<li>.Mac OS</li>
+												<li>.pug</li>
+												<li>.SCSS</li>
+												<li>.JSON</li>
+												<li>.JQuery</li>
+												<li>.Bootstrap</li>
+												<li>.npm</li>
+												<li>.Gulp.js</li>
+												<li>.Node.js</li>
+												<li>.Git</li>
+												<li>.Atlassian SourceTree</li>
+												<li>.Visual Stuidio Code</li>
+												<li>.Zeplin</li>
+												<li>.Metodologia Agile</li>
+											</ul>
+											<hr />
+											<a href="https://www.generali.it" class="linkSite" target="_blank">
+												<i class="fa fa-external-link"></i>
+												genarali.it
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a role="button">
+												<span>.Ray-Ban</span>
+												<i class="fa fa-angle-down"></i>
+											</a>
+										</h4>
+									</div>
+									<div class="panel-content">
+										<div class="panel-body">
+											<h4>Frontend Developer</h4>
+											<div class="border">
+												<div class="images">
+													<div class="zoom">
+														<img
+															src="images/portfolio/portfolio_background.jpg"
+															class="img-responsive"
+															alt="Luxottica e-commerce website"
+														/>
+														<div class="img-project">
+															<img
+																src="images/portfolio/portfolio_rayban.jpg"
+																class="project rayban"
+																alt="Front end development of Rayban e-commerce"
+															/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p>
+												Durante il mio ruolo all'interno del team frontend di Luxottica, ho avuto il privilegio di lavorare
+												gran parte del tempo sull'e-commerce di Ray-Ban, collaborando attivamente con i dipartimenti di
+												Design, UX, IT, Copywriting, Prodotto e Marketing. In stretto contatto con i Project Manager, ho
+												sostenuto il team frontend nel sito web di Ray-Ban, effettuando modifiche, correzioni di bug e
+												implementazioni di nuovi contenuti.
+											</p>
+											<p>
+												Uno dei progetti più significativi a cui ho contribuito è stata la creazione di una landing page
+												dedicata alla collaborazione con Peggy Gou (#FeelYourBeat) per il lancio di due varianti di eyewear:
+												"Square and Oval by Peggy Gou".
+											</p>
+											<hr />
+											<ul>
+												<li>.Mac OS</li>
+												<li>.HTML</li>
+												<li>.CSS</li>
+												<li>.JSON</li>
+												<li>.JQuery</li>
+												<li>.Visual Stuidio Code</li>
+												<li>.IBM Websphere</li>
+												<li>.Atlasssian Jira</li>
+												<li>.Asana</li>
+												<li>.Photoshop</li>
+											</ul>
+											<hr />
+											<a href="https://www.ray-ban.com" class="linkSite" target="_blank">
+												<i class="fa fa-external-link"></i>
+												ray-ban.com
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a role="button">
+												<span>.H&M</span>
+												<i class="fa fa-angle-down"></i>
+											</a>
+										</h4>
+									</div>
+									<div class="panel-content">
+										<div class="panel-body">
+											<h4>Frontend Developer</h4>
+											<div class="border">
+												<div class="images">
+													<div class="zoom">
+														<img
+															src="images/portfolio/portfolio_background.jpg"
+															class="img-responsive"
+															alt="H&M e-commerce website"
+														/>
+														<div class="img-project">
+															<img
+																src="images/portfolio/portfolio_hm.jpg"
+																class="project hm"
+																alt="Front end development of H&M e-commerce"
+															/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p>
+												In questo progetto ho collaborato strettamente con il team di sviluppo interno di Accenture, una Web
+												Agency svedese e gli altri stakeholder per garantire un'efficace integrazione del sito su AEM.
+											</p>
+											<p>
+												Il processo partiva da un'analisi dettagliata del codice frontend per garantire la qualità e
+												l'efficienza delle funzionalità implementate dalla Web Agency.
+											</p>
+											<p>
+												In un secondo momento venivano implementati i contenuti all'interno di Adobe Experience Manager (AEM),
+												personalizzando l'interfaccia del CMS per consentire la gestione dei contenuti da parte del cliente
+												finale.
+											</p>
+											<p>
+												Il mio contributo ha migliorato l'efficienza e la flessibilità nella gestione dei contenuti del sito
+												e-commerce di H&M.
+											</p>
+											<hr />
+											<ul>
+												<li>.Windows</li>
+												<li>.HTML</li>
+												<li>.CSS</li>
+												<li>.JQuery</li>
+												<li>.Adobe Experience Manager</li>
+												<li>.Visual Stuidio Code</li>
+											</ul>
+											<hr />
+											<a href="https://www2.hm.com" class="linkSite" target="_blank">
+												<i class="fa fa-external-link"></i>
+												hm.com
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a role="button">
+												<span>.Prada</span>
+												<i class="fa fa-angle-down"></i>
+											</a>
+										</h4>
+									</div>
+									<div class="panel-content">
+										<div class="panel-body">
+											<h4>Frontend Developer</h4>
+											<div class="border">
+												<div class="images">
+													<div class="zoom">
+														<img
+															src="images/portfolio/portfolio_background.jpg"
+															class="img-responsive"
+															alt="Prada e-commerce website"
+														/>
+														<div class="img-project">
+															<img
+																src="images/portfolio/portfolio_prada.jpg"
+																class="project prada"
+																alt="Front end development of Prada e-commerce"
+															/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p>
+												Nel corso del mio impiego per il re-design completo dell'e-commerce Prada.com, ho avuto il privilegio
+												di lavorare all'interno di un team front-end di HRM per portare nuova vita al prestigioso brand di
+												moda.
+											</p>
+											<p>
+												Lavorando a stretto contatto con il team di sviluppo dell'agenzia HRM, ho preparato il terreno per
+												l'implementazione dei componenti sviluppati nel CMS Adobe Experience Manager.
+											</p>
+											<p>
+												Ogni componente sviluppato è stato progettato con l'utente finale in mente, garantendo un'esperienza
+												di navigazione fluida e intuitiva su Prada.com. La scalabilità e la facilità di personalizzazione dei
+												componenti hanno permesso al team di HRM di adattare rapidamente il sito alle esigenze in continua
+												evoluzione del marchio.
+											</p>
+											<p>
+												Partendo dalle grafiche create dai designer di Deloitte, ho trasformato la loro visione in realtà
+												digitale, sviluppando il codice statico per diverse sezioni del sito.
+											</p>
+											<hr />
+											<ul>
+												<li>.Mac OS</li>
+												<li>.HTML</li>
+												<li>.CSS</li>
+												<li>.SCSS</li>
+												<li>.JQuery</li>
+												<li>.Bootstrap</li>
+												<li>.Adobe Experience Manager</li>
+												<li>.Git</li>
+												<li>.Atlassian Jira</li>
+												<li>.Visual Stuidio Code</li>
+												<li>.Sketch</li>
+											</ul>
+											<hr />
+											<a href="https://www.prada.com" class="linkSite" target="_blank">
+												<i class="fa fa-external-link"></i>
+												prada.com
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a role="button">
+												<span>.Pasticceria Marchesi 1824</span>
+												<i class="fa fa-angle-down"></i>
+											</a>
+										</h4>
+									</div>
+									<div class="panel-content">
+										<div class="panel-body">
+											<h4>Frontend Developer</h4>
+											<div class="border">
+												<div class="images">
+													<div class="zoom">
+														<img
+															src="images/portfolio/portfolio_background.jpg"
+															class="img-responsive"
+															alt="Prada e-commerce website"
+														/>
+														<div class="img-project">
+															<img
+																src="images/portfolio/portfolio_marchesi_1824.jpg"
+																class="project marchesi"
+																alt="Front end development of Pasticceria Marchesi 1824 e-commerce"
+															/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p>
+												Lavorando in stretta sinergia con un piccolo team di Reply, ho garantito un flusso di lavoro efficace
+												e coordinato, condividendo idee e soluzioni per portare in vita il nuovo design dell'e-commerce di
+												Pasticceria Marchesi.
+											</p>
+											<p>
+												La mia principale responsabilità è stata lavorare esclusivamente sul codice CSS per tradurre il design
+												fornito da terzi in una nuova e coinvolgente esperienza visiva per gli utenti del sito. Attraverso il
+												CSS, ho modellato l'aspetto e la sensazione del sito, creando layout fluidi e accattivanti.
+											</p>
+											<p>
+												Utilizzando il sitema di gestione dei contenuti: Oracle WCS e mantenendo la struttura HTML
+												pre-impostata, ho integrato il nuovo design senza compromettere la funzionalità esistente del sito
+												e-commerce, garantendo una transizione senza intoppi e un'esperienza utente coerente.
+											</p>
+											<p>
+												Il risultato finale è stato un e-commerce Pasticceria Marchesi rinnovato e affascinante, che unisce il
+												gusto tradizionale della prestigiosa pasticceria con un design moderno e accattivante. Offrendo ai
+												clienti un'esperienza online migliore.
+											</p>
+											<hr />
+											<ul>
+												<li>.Mac OS</li>
+												<li>.CSS</li>
+												<li>.Oracle WCS</li>
+												<li>.Visual Stuidio Code</li>
+												<li>.Photoshop</li>
+											</ul>
+											<hr />
+											<a href="https://www.pasticceriamarchesi.com" class="linkSite" target="_blank">
+												<i class="fa fa-external-link"></i>
+												pasticceriamarchesi.com
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</div>
+			<!-- /.section -->
+		</div>
 
-    <footer class="footer">
-        
-        <div class="container">
-    
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="next">
-                        <p class="read-next">prosegui con</p>
-                        <p class="next-page">. Contatti</p>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <a class="pull-right next-arrow" href="/pages/contact.html">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- /.row -->
-    
-        </div>
-        <!-- /.container -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-8">
+						<div class="next">
+							<p class="read-next">prosegui con</p>
+							<p class="next-page">. Contatti</p>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<a class="pull-right next-arrow" href="/pages/contact.html">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</footer>
 
-    </footer>
-    
-    <!-- Vendor: Javascripts -->
-    
-    <!-- Plugin Javascripts -->
-    <script src="../js/wow.min.js" defer></script>
+		<!-- Vendor: Javascripts -->
 
-    <!-- App Javascripts -->
-    <script src="../js/script.js" defer></script>
-</body>
+		<!-- Plugin Javascripts -->
+		<script src="../js/wow.min.js" defer></script>
+
+		<!-- App Javascripts -->
+		<script src="../js/script.js" defer></script>
+	</body>
 </html>
