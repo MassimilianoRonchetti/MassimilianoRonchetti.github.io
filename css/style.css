@@ -1215,6 +1215,17 @@ footer a.next-arrow i{
 }
 /* -------------- */
 
+.black .brand:before {
+	height: 15px;
+	width: 45px;
+	animation: redRectL 4s ease infinite;
+}
+.black .brand:after {
+	height: 15px;
+	width: 45px;
+	animation: redRectR 4s ease infinite;
+}
+
 /* 404 Page Styles */
 .error-404 {
     font-size: 8em;
